@@ -226,7 +226,7 @@ footer{
 
 .infoOrange{
     color: orange;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 #flecheOrange{
@@ -246,5 +246,6 @@ footer{
 
 #copyRight{
     margin-left: 10%;
-    margin-top: 4%;
+    margin-top: 5%;
+
 }
