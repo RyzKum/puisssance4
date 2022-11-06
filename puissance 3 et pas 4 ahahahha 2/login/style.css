@@ -36,9 +36,8 @@ form input{
     background-color: rgba(40, 45, 79, 0.757);
     border: none;
     width: 280px;
-    height: 30px;
-    border-radius: 2px;
     height: 50px;
+    border-radius: 2px;
 }
 
 .haut{
