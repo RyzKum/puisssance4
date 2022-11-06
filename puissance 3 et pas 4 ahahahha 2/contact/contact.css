@@ -1,7 +1,7 @@
 body{
     padding: 0 0 0 0;
     margin : 0 0 0 0;
-    background-color: blue;
+    background-color: rgb(16,12,48);
     height: 100%;
     width: 100%;
 }
@@ -15,6 +15,8 @@ nav{
     flex-direction: row;
     position: absolute;
     top : 0;
+    color: white;
+    font-size: 17px;
 }
 
 #nav1{
@@ -37,7 +39,7 @@ nav{
     flex-direction: row;
     align-items: center;
     margin : auto auto auto auto;
-    font-size: 11px;
+    
 }
 
 #nav2 p {
@@ -52,7 +54,7 @@ nav{
 
 header{
     position: absolute;
-    height: 40%;
+    height: 20%;
     width: 100%;
     background-image: url("header.jpg");
     display: flex;
@@ -65,7 +67,7 @@ header{
 
 main{
     position: absolute;
-    top : 70%;
+    top : 30%;
     width: 100%;
     height: 80%;
     /* border-style: solid; */
@@ -114,7 +116,7 @@ main{
     flex-direction: column;
     width: 40%;
     height: 300px;
-    margin: 40px auto auto auto;
+    margin: 5% auto auto auto;
     justify-content: space-between;
     /* border-style: solid; */
 
@@ -177,11 +179,14 @@ input {
 #envoyer{
     width: 30%;
     height: 40px;
+    background-color: orange;
+    border-style: none;
+    border-radius: 10px;
 }
 
 /* Footer  */
 
-footer{
+/* footer{
     position: absolute;
     top : 170%;
     width: 100%;
@@ -192,17 +197,17 @@ footer{
     width: 70%;
     height: min-content;
     /* border-style: solid; */
-    margin-left: 10%;
+    /* margin-left: 10%;
     display: flex;
     justify-content: space-between;
     
-}
+} */
 
-#reseau{
+/* #reseau{
     display: flex;
     width:min-content;
     /* justify-content: space-between; */
-}
+/* }
 
 .logoOrange{
     background-color: orange;
@@ -229,7 +234,7 @@ footer{
     font-weight: normal;
 }
 
-#flecheOrange{
+ #flecheOrange{
     height: 15px;
     width: 30px;
     background-color: orange;
@@ -242,10 +247,104 @@ footer{
     float: right;
     margin-right: 5%;
     margin-top: -25px;
-}
+} 
 
 #copyRight{
     margin-left: 10%;
     margin-top: 5%;
 
-}
+} */
+
+/* _______________________ */
+
+#footerPart1{
+    width: 70%;
+    height: min-content;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #reseau{
+    display: flex;
+    width:min-content;
+  }
+  
+  .logoOrange{
+    background-color: orange;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tailleImage{
+  
+    height: 30px;
+    width: 30px;
+  }
+  
+  .pointOrange{
+    color: orange;
+  }
+  
+  .infoOrange{
+    
+    color: orange;
+    font-weight: bold;
+  }
+  
+  #copyRight{
+    margin-left: 10%;
+    margin-top: 5%;
+  } 
+  
+  .ses5{
+  background-color: rgb(14,11,41);
+  position: absolute;
+  top : 100%;
+  width: 100%;
+  }
+  
+  #info p{
+    color: aliceblue;
+    margin-bottom: 15px;
+  }
+  
+  #power p {
+    color: aliceblue;
+    margin-top: 15px;
+  }
+  
+  #info{
+    margin-top: 5%;
+  }
+  
+  #power{
+    margin-top: 5%;
+  }
+  
+  #copyRight {
+    color: aliceblue;
+  }
+  
+  #footerPart2{
+    margin-bottom: 5%;
+  }
+
+  #flecheOrange{
+    height: 15px;
+    width: 30px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    color: white;
+    font-size: 40px;
+    float: right;
+    margin-right: 5%;
+    margin-top: -25px;
+} 
