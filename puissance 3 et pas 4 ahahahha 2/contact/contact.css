@@ -46,6 +46,11 @@ nav{
     margin-right: 10px;
 }
 
+#nav2 a {
+    color: white;
+    text-decoration: none;
+}
+
 #nav2  :nth-child(4){
     white-space: nowrap;
 }
