@@ -5,18 +5,22 @@ body{
     height: 100%;
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none ;
 }
 
-.fond1{
-background-image: url(https://as1.ftcdn.net/v2/jpg/02/38/67/72/1000_F_238677249_c5YBB99scr6fzuYa4lH1Rlj0EwnA3CHW.jpg);
-height: 200px;
-opacity: 80%;
-width: 100%;
+
+.image1{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/02/38/67/72/1000_F_238677249_c5YBB99scr6fzuYa4lH1Rlj0EwnA3CHW.jpg);
+    height: 200px;
+    opacity: 80%;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.headerBtn{
-    text-decoration: none;
-    color: white;
-    }
+
+
 
 
 nav{
@@ -39,7 +43,7 @@ nav{
 }
 
 #ajunav2{
-    width: 50%;
+    width: 70%;
 }
 
 #nav2{
@@ -49,7 +53,7 @@ nav{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin : auto auto auto auto;
+    margin : auto 5% auto auto;
     
 }
 
@@ -79,6 +83,7 @@ header{
     color: white;
     font-size: 23px;
     top : 10%;
+    text-align: center;
 }
 
 main{
@@ -96,7 +101,7 @@ main{
     width: 80%;
     height: 30%;
     /* border-style: solid; */
-    margin : 13% auto auto auto;
+    margin : 15% auto auto auto;
 
 }
 
@@ -109,7 +114,7 @@ main{
     align-items: center;
     flex-direction: column;
     color: white;
-    background-color: rgb(15,11,38);
+    background-color: rgba(13,11,38,255);
     border-radius: 10px;
     /* flex-wrap: wrap; */
 
@@ -134,7 +139,6 @@ main{
     height: 300px;
     margin: 5% auto auto auto;
     justify-content: space-between;
-    background-color: rgba(40, 45, 79, 0.757);
     /* border-style: solid; */
 
 }
@@ -151,19 +155,16 @@ main{
 #divInputNom{
     height: 40px;
     width: 40%;
-    background-color: rgba(40, 45, 79, 0.757);
 }
 
 #divInputEmail{
     height: 40px;
     width: 40%;
-
 }
 
 #divInputSujet{
     width: 100%;
     height: 40px;
-    background-color: rgba(40, 45, 79, 0.757);
 }
 
 #divInputMessage{
@@ -203,20 +204,6 @@ input {
     border-style: none;
     border-radius: 10px;
 }
-form input{
-    color: white;
-    margin-top: 10px;
-    background-color: rgba(40, 45, 79, 0.757);
-    border: none;
-    width: 280px;
-    height: 50px;
-    border-radius: 2px;
-}
-
-.loot{
-    text-decoration: none;
-    color: white;
-    }
 
 /* Footer  */
 
@@ -224,9 +211,7 @@ form input{
     position: absolute;
     top : 170%;
     width: 100%;
-
 }
-
 #footerPart1{
     width: 70%;
     height: min-content;
@@ -242,7 +227,6 @@ form input{
     width:min-content;
     /* justify-content: space-between; */
 /* }
-
 .logoOrange{
     background-color: orange;
     height: 40px;
@@ -252,22 +236,18 @@ form input{
     justify-content: center;
     align-items: center;
 }
-
 .tailleImage{
    
     height: 30px;
     width: 30px;
 }
-
 .pointOrange{
     color: orange;
 }
-
 .infoOrange{
     color: orange;
     font-weight: normal;
 }
-
  #flecheOrange{
     height: 15px;
     width: 30px;
@@ -282,11 +262,9 @@ form input{
     margin-right: 5%;
     margin-top: -25px;
 } 
-
 #copyRight{
     margin-left: 10%;
     margin-top: 5%;
-
 } */
 
 /* _______________________ */
@@ -338,7 +316,7 @@ form input{
   .ses5{
   background-color: rgb(14,11,41);
   position: absolute;
-  top : 150%;
+  top : 140%;
   width: 100%;
   }
   
@@ -358,7 +336,12 @@ form input{
   
   #power{
     margin-top: 5%;
+  
   }
+  .loot{
+    text-decoration: none;
+    color: white;
+    }
   
   #copyRight {
     color: aliceblue;
@@ -383,3 +366,7 @@ form input{
     margin-top: -25px;
 } 
 .gotopbtn {     position: fixed;     width: 50px;     height: 50px;     background-color: orange;     bottom: 40px;     right: 50px;      text-decoration: none;     text-align: center;     line-height: 50px;     color: white;     font-size: 22px;      opacity: 50%; }
+
+.headerBtn:hover{
+color: orange;
+}

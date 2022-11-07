@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
@@ -32,8 +32,10 @@
     </nav>
 
 
-    <header class="fond1">
+    <header>
+        <div class="image1">
         <p>NOUS CONTACTER</p>
+        </div>
     </header>
 
 
@@ -55,17 +57,22 @@
         </div>
 
         <div id="formu">
-            <section class="formBlock">
+            <div id="nom">
 
-                <form action="post" class="form">
-        
-                    <input class="mail" type="email" placeholder="Email" maxlength="30">
-                    <input class="mdp" type="password" placeholder="Mot de passe">
-                    <input class="bouton2" type="submit" value="Connexion">
-                </form>
-        
-            </section>
-        </div>
+                <div id="divInputNom">
+                    <input id="inputNom"type="text" placeholder="Nom">
+                </div>
+                <div id="divInputEmail">
+                    <input id="inputMail"type="text"placeholder="Email">
+                </div>
+                
+                </div>
+                <div id="divInputSujet">
+                    <input id="inputSujet"type="text" placeholder="Sujet">
+                </div>
+            <div id="divInputMessage">
+                <input id="inputMessage"type="text" placeholder="Message">
+            </div>
 
             <button id="envoyer">Envoyer</button>
             
@@ -140,7 +147,6 @@
             <p id="copyRight">Copyright © 2022 Tous droits réservés</p>
         </div>
     </footer> -->
-    
     <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
 </body>
 </html>

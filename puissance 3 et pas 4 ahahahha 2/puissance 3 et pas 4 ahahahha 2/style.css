@@ -45,6 +45,11 @@ header{
   text-decoration: none;
   color: white;
   }
+
+  .headerBtn:hover{
+
+    color: orange;
+  }
   
 .studio{
 margin-top: 20%;
@@ -492,4 +497,7 @@ background-color: rgb(14,11,41);
 .loot{
 text-decoration: none;
 color: white;
+}
+.headerBtn:hover{
+  color: orange;
 }
