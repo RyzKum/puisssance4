@@ -6,6 +6,13 @@ body{
     width: 100%;
 }
 
+.fond1{
+background-image: url(https://as1.ftcdn.net/v2/jpg/02/38/67/72/1000_F_238677249_c5YBB99scr6fzuYa4lH1Rlj0EwnA3CHW.jpg);
+height: 200px;
+opacity: 80%;
+width: 100%;
+}
+
 
 
 nav{
@@ -85,7 +92,7 @@ main{
     width: 80%;
     height: 30%;
     /* border-style: solid; */
-    margin : auto auto auto auto;
+    margin : 13% auto auto auto;
 
 }
 
@@ -98,7 +105,7 @@ main{
     align-items: center;
     flex-direction: column;
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(15,11,38);
     border-radius: 10px;
     /* flex-wrap: wrap; */
 
@@ -139,6 +146,7 @@ main{
 #divInputNom{
     height: 40px;
     width: 40%;
+    background-color: rgba(40, 45, 79, 0.757);
 }
 
 #divInputEmail{
@@ -309,7 +317,7 @@ input {
   .ses5{
   background-color: rgb(14,11,41);
   position: absolute;
-  top : 100%;
+  top : 150%;
   width: 100%;
   }
   
