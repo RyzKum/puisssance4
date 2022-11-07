@@ -54,22 +54,17 @@
         </div>
 
         <div id="formu">
-            <div id="nom">
+            <section class="formBlock">
 
-                <div id="divInputNom">
-                    <input id="inputNom"type="text" placeholder="Nom">
-                </div>
-                <div id="divInputEmail">
-                    <input id="inputMail"type="text"placeholder="Email">
-                </div>
-                
-                </div>
-                <div id="divInputSujet">
-                    <input id="inputSujet"type="text" placeholder="Sujet">
-                </div>
-            <div id="divInputMessage">
-                <input id="inputMessage"type="text" placeholder="Message">
-            </div>
+                <form action="post" class="form">
+        
+                    <input class="mail" type="email" placeholder="Email" maxlength="30">
+                    <input class="mdp" type="password" placeholder="Mot de passe">
+                    <input class="bouton2" type="submit" value="Connexion">
+                </form>
+        
+            </section>
+        </div>
 
             <button id="envoyer">Envoyer</button>
             
