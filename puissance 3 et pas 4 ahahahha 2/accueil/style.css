@@ -59,6 +59,11 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+#ancreJouer{
+  text-decoration: none;
+  color: aliceblue;
+}
+
 #jouer{
   display: flex;
   justify-content: center;
@@ -92,7 +97,6 @@ color: aliceblue;
 .bouton{
   display: flex;
   background-color: orange;
-  color: aliceblue;
   width: 10%;
   height: 60px;
   border: none;
