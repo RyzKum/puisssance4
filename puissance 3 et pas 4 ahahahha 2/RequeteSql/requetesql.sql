@@ -15,3 +15,9 @@ SET mot_de_passe = 'azertyfff'
 WHERE Utlisateur.identifiant = 1;
 
 INSERT INTO jeu (id, nom_jeu) VALUES ('4', 'The Tower of memory');
+
+
+-- Requete Connexion
+
+SELECT * FROM `utlisateur` WHERE `email` = 'baptiste@gmail.com' AND `mot_de_passe` = 'ptdrlo';
+
