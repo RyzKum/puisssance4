@@ -52,7 +52,17 @@ header{
   }
   
 .studio{
-margin-top: 20%;
+margin-top: 10%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+#jouer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
 #text1{
@@ -84,10 +94,8 @@ color: aliceblue;
   background-color: orange;
   color: aliceblue;
   width: 10%;
-  height: 40px;
+  height: 60px;
   border: none;
-  margin-top: 5%;
-  margin-left: 45%;
   justify-content: center;
   align-items: center;
  
