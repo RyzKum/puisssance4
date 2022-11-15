@@ -15,3 +15,4 @@ iconeChat.addEventListener("click",()=>{
 })
 
 let test = "je suis un test";
+console.log(test);
