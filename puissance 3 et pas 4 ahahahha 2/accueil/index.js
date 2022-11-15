@@ -13,3 +13,5 @@ iconeChat.addEventListener("click",()=>{
         basTriangle.style.visibility = "hidden";
     }
 })
+
+let test = "je suis un test";
