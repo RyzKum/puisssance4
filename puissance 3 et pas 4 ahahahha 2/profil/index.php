@@ -65,9 +65,9 @@
     
                 <div id="power">
                     <p>Power Of Memory</p>
-                    <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.html">Jouer ! </a> </p>
-                    <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.html">Les scores</a></p>
-                    <p><span class="pointOrange">▪</span> <a class="loot" href="../../puissance 3 et pas 4 ahahahha 2/contact/contact.html">Nous contacter </a></p>
+                    <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.php">Jouer ! </a> </p>
+                    <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.php">Les scores</a></p>
+                    <p><span class="pointOrange">▪</span> <a class="loot" href="../../puissance 3 et pas 4 ahahahha 2/contact/contact.php">Nous contacter </a></p>
     
                 </div>
             </div>
