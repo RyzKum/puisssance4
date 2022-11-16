@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>header</title>
-    <link rel="stylesheet" href="styleheader.css">
 </head>
 <body>
 <nav class="haut">
