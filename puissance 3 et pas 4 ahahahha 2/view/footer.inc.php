@@ -16,13 +16,13 @@
                     <p><span class="infoOrange">Email :</span> support@powerofmemory.com</p>
                     <p><span class="infoOrange">Location : </span>Paris</p>
                     <div id="reseau">
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/logofacebook.jpeg" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/twit.jpeg" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/Google-Logo.png" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/pint.png" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/Instagram_icon.png.webp" class="tailleImage"></img></div>
-                    </div>
+                    <div class="logoOrange"><img src="asset/logo-instagram.png" class="tailleImage"></img></div>
+                    <div class="logoOrange"><img src="asset/twit.jpeg" class="tailleImage"></img></div>
+                    <div class="logoOrange"><img src="asset/Google__G__Logo.svg.png" class="tailleImage"></img></div>
+                    <div class="logoOrange"><img src="asset/pint.png" class="tailleImage"></img></div>
+                    <div class="logoOrange"><img src="asset/Instagram_icon.png.webp" class="tailleImage"></img></div>
                 </div>
+            </div>
     
                 <div id="power">
                     <p>Power Of Memory</p>

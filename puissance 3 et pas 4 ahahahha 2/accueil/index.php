@@ -198,6 +198,3 @@ require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahaha
 </body>
 
 </html>
-<?php 
-require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
-?>
