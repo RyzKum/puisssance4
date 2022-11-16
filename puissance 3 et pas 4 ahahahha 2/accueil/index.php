@@ -1,3 +1,6 @@
+<?php
+require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/header.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,32 +13,7 @@
 </head>
 
 <body>
-    <div class="imageheader">
-    <header>
-
-        <p id="montitre">The Power Of Memory</p>
-        <nav>
-        <a class="headerBtn" href="../accueil/index.php">ACCUEIL</a>
-            <a class="headerBtn" href="../inscription/index.php">S'INSCRIRE</a>
-            <a class="headerBtn" href="../login/index.php">SCORES</a>
-            <a class="headerBtn" href="../../puissance 3 et pas 4 ahahahha 2/contact/contact.php">CONTACTER</a>
-        </nav>
-
-    </header>
-        <div class="studio">
-        <h3 id="text1">BIENVENUE DANS NOTRE STUDIO!</h2> 
-        <h4 id="text2">Venez challenger les cerveaux les plus agile !</h4>
-        <div id="jouer">
-            <p  class="bouton" > <a id="ancreJouer"href="../login/index.html">JOUER !</a> </p> 
-        </div>
-        </div>
-        
-
-    </div>
-
-
     
-
     <div class="image2">
         <img class="mid1" src="asset/retro.jpg" alt="">
         <img class="mid2" src="asset/dabbing-man.jpg" alt="">
@@ -220,3 +198,6 @@
 </body>
 
 </html>
+<?php 
+require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
+?>
