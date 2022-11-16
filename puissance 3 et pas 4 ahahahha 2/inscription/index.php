@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/header.inc.php";
+    require "../view/header.inc.php";
     ?>
     
     <div class="fond1 h1">
