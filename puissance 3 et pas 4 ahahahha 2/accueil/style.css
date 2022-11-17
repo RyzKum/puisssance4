@@ -13,10 +13,8 @@ body{
 nav{
   font-size: 18px;
   display: flex;
-  margin-left: 54%;
-  flex-direction: row;
-  align-items: center;
-  
+  align-items: space-between;
+  margin-top: 2%;
 
 }.imageheader{
   display: flex;
