@@ -28,8 +28,9 @@
 
         }
     }
+
     ?>
-    
+
     <div class="fond1 h1">
     <h1 class="h1">INSCRIPTION</h1>
     </div>
@@ -48,7 +49,7 @@
 
     </section>
     <?php
-    
+    require "../view/footer.inc.php";
     ?>
 </body>
 </html>
