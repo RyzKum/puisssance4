@@ -1,6 +1,3 @@
-<?php
-    require "../view/header.inc.php";
-    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +10,28 @@
 </head>
 
 <body>
+
+
+
+<div class="imageheader">
+    <header>
+
+    <?php
+    require "../view/header.inc.php";
+    ?>
+
+    </header>
+        <div class="studio">
+        <h3 id="text1">BIENVENUE DANS NOTRE STUDIO!</h2> 
+        <h4 id="text2">Venez challenger les cerveaux les plus agile !</h4>
+        <div id="jouer">
+            <p  class="bouton" > <a id="ancreJouer"href="../login/index.html">JOUER !</a> </p> 
+        </div>
+        </div>
+        
+
+    </div>
+
 <div class="studio">
         <h3 id="text1">BIENVENUE DANS NOTRE STUDIO!</h2> 
         <h4 id="text2">Venez challenger les cerveaux les plus agile !</h4>
