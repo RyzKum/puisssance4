@@ -8,7 +8,30 @@
 </head>
 <body>
     <?php
-    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/header.inc.php";
+    // require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/header.inc.php";
+    
+
+    $user = "root";
+    $pass = "";
+    $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
+
+
+    if(isset($_POST['submit']) ){
+        if(!empty($_POST['email']) AND !empty($_POST['pseudo']) AND !empty($_POST['mot-de-passe'])){
+
+            $email = htmlspecialchars($_POST['email']);
+            $pseudo = htmlspecialchars($_POST['pseudo']);
+            $mdp = htmlspecialchars($_POST['mot-de-passe']);
+            $dateIncri = date('d/m/Y h:i:s');
+            $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+            $insertUser-> execute(array($email,$pseudo,$mdp,$dateIncri));
+        }
+        else{
+            echo 'Veuillez remplir les champs demandés';
+            
+        }
+    }
+
     ?>
     <div class="fond1 h1">
     <h1 class="h1">INSCRIPTION</h1>
@@ -16,13 +39,13 @@
 
     <section class="formBlock">
 
-        <form action="post" class="form">
+        <form method="POST" action="" class="form">
 
-            <input class="mail" type="email" placeholder="Email" maxlength="30">
-            <input class="pseudo" type="text" placeholder="Pseudo" maxlength="30">
-            <input class="mdp" type="password" placeholder="Mot de passe">
-            <input class="mdp" type="password" placeholder="Confirmer le mot de passe">
-            <input class="bouton2" type="submit" value="Inscription">
+            <input class="mail" type="email" placeholder="Email" name= "email"maxlength="30">
+            <input class="pseudo" type="text" placeholder="Pseudo" name="pseudo"maxlength="30">
+            <input class="mdp" type="password" placeholder="Mot de passe" name = "mot-de-passe">
+            <input class="mdp" type="password" placeholder="Confirmer le mot de passe" name = "conf-mdp">
+            <input class="bouton2" type="submit" value="Inscription" name="submit">
     
         </form>
 
