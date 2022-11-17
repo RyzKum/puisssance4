@@ -6,18 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="haut">
-        <div>
-        <p id="montitre">The Power Of Memory</p>
-        </div>
-        <div class="acc">
-        <a class ="accueil" href="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/index.html">ACCUEIL</a>
-        <a class ="jeu" href="">JEU</a>
-        <a class=" scores" href="">SCORES</a>
-        <a class="contact" href="/puissance 3 et pas 4 ahahahha 2/contact/contact.html">NOUS CONTACTER</a>
-        </div>
-    </nav>
-
+    <?php
+require "../view/header.inc.php";
+?>
     <div class="fond1 h1">
     <h1 class="h1">SCORES</h1>
     </div>
@@ -61,39 +52,8 @@
     </div>
 
     </section>
-
-    <section class="ses5">
-        <footer>
-            <div id="footerPart1">
-                <div id="info">
-                    <p>Information</p>
-                    <p>Quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-                    <p><span class="infoOrange">Tel : </span><span class="tex"> 05 04 03 02</p>
-                    <p><span class="infoOrange">Email :</span> support@powerofmemory.com</p>
-                    <p><span class="infoOrange">Location : </span>Paris</p>
-                    <div id="reseau">
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/logofacebook.jpeg" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/twit.jpeg" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/Google-Logo.png" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/pint.png" class="tailleImage"></img></div>
-                        <div class="logoOrange"><img src="/puissance 3 et pas 4 ahahahha 2/puissance 3 et pas 4 ahahahha 2/asset/Instagram_icon.png.webp" class="tailleImage"></img></div>
-                    </div>
-                </div>
-    
-                <div id="power">
-                    <p>Power Of Memory</p>
-                    <p><span class="pointOrange">▪</span>  Jouer !</p>
-                    <p><span class="pointOrange">▪</span>  Les scores</p>
-                    <p><span class="pointOrange">▪</span>  Nous contacter</p>
-    
-                </div>
-            </div>
-    
-            <div id="footerPart2">
-                <p id="copyRight">Copyright © 2022 Tous droits réservés</p>
-            </div>
-        </footer>
-
-
+    <?php
+    require "../view/header.inc.php";
+    ?>
 </body>
 </html>
