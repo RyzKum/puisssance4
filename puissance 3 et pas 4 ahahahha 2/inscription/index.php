@@ -27,7 +27,6 @@
                 $dateInscri = date('d/m/Y h:i:s');
                 $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
                 $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
-
             }
             else{
                 echo'mot de passe différent';
