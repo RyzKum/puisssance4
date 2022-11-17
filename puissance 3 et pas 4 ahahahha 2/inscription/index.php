@@ -16,12 +16,23 @@
     if(isset($_POST['submit']) ){
         if(!empty($_POST['email']) AND !empty($_POST['pseudo']) AND !empty($_POST['mot-de-passe'])){
 
+            
             $email = htmlspecialchars($_POST['email']);
             $pseudo = htmlspecialchars($_POST['pseudo']);
             $mdp = htmlspecialchars($_POST['mot-de-passe']);
-            $dateInscri = date('d/m/Y h:i:s');
-            $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
-            $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+            $confmdp = htmlspecialchars($_POST['conf-mdp']);
+
+            if($mdp == $confmdp){
+
+                $dateInscri = date('d/m/Y h:i:s');
+                $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+                $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+
+            }
+            else{
+                echo'mot de passe différent';
+            }
+
         }
         else{
             echo 'Veuillez remplir les champs demandés';
