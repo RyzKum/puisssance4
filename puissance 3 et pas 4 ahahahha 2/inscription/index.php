@@ -9,7 +9,7 @@
 <body>
     <?php
     $user = "root";
-    $pass = "";
+    $pass = "root";
     $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
 
 
