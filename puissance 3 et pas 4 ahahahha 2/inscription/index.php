@@ -8,7 +8,26 @@
 </head>
 <body>
     <?php
-    
+    $user = "root";
+    $pass = "";
+    $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
+
+
+    if(isset($_POST['submit']) ){
+        if(!empty($_POST['email']) AND !empty($_POST['pseudo']) AND !empty($_POST['mot-de-passe'])){
+
+            $email = htmlspecialchars($_POST['email']);
+            $pseudo = htmlspecialchars($_POST['pseudo']);
+            $mdp = htmlspecialchars($_POST['mot-de-passe']);
+            $dateInscri = date('d/m/Y h:i:s');
+            $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+            $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+        }
+        else{
+            echo 'Veuillez remplir les champs demandés';
+
+        }
+    }
     ?>
     
     <div class="fond1 h1">
@@ -29,7 +48,7 @@
 
     </section>
     <?php
-    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
+    
     ?>
 </body>
 </html>
