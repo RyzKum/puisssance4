@@ -26,7 +26,7 @@
 
         <div class="top"> 
             <div class="second">
-                <img src="pdp2.png" alt="">
+                <img src="..\scores\asset\pdp2.png" alt="">
                 <div class="sec">
                 <p>2eme <br></p>
                 <p>Potaaato</p>
@@ -34,7 +34,7 @@
             </div>
             </div>
             <div class="first">
-                <img src="pdp1.jpg" alt="">
+                <img src="..\scores\asset\pdp1.jpg" alt="">
                 <div class="fir">
                 <p>1er<br></p>
                 <p>Chønic </p>
@@ -42,7 +42,7 @@
             </div>
             </div>
             <div class="third">
-                <img src="pdp3.png" alt="">
+                <img src="..\scores\asset\pdp3.png" alt="">
                 <div class="th">
                 <p>3eme <br></p>
                 <p>Az0Xx</p>
@@ -52,12 +52,12 @@
         </div>
 
     <div class="ranking">
-        <div class="position"><p>4eme</p><img src="..\scores\assetpdp4.jfif" alt=""><p>KendiX</p><p>2:00.310</p></div>
-        <div class="position"><p>5eme</p><img src="..\asset\pdp5.png" alt=""><p>Xeno</p><p>2:05.850</p></div>
-        <div class="position"><p>6eme</p><img src="\pdp6.png" alt=""><p>SL1D3R</p><p>2:08.610</p></div>
-        <div class="position"><p>7eme</p><img src="pdp7.png" alt=""><p>TroniiX</p><p>2:15.420</p></div>
-        <div class="position"><p>8eme</p><img src="pdp8.png" alt=""><p>AKUMA</p><p>2:17.050</p></div>
-        <div class="position"><p>9eme</p><img src="pdp9.jpg" alt=""><p>zReeZ_</p><p>2:50.573</p></div>
+        <div class="position"><p>4eme</p><img src="..\scores\asset\pdp4.png" alt=""><p>KendiX</p><p>2:00.310</p></div>
+        <div class="position"><p>5eme</p><img src="..\scores\asset\pdp5.png" alt=""><p>Xeno</p><p>2:05.850</p></div>
+        <div class="position"><p>6eme</p><img src="..\scores\asset\pdp6.png" alt=""><p>SL1D3R</p><p>2:08.610</p></div>
+        <div class="position"><p>7eme</p><img src="..\scores\asset\pdp7.png" alt=""><p>TroniiX</p><p>2:15.420</p></div>
+        <div class="position"><p>8eme</p><img src="..\scores\asset\pdp8.png" alt=""><p>AKUMA</p><p>2:17.050</p></div>
+        <div class="position"><p>9eme</p><img src="..\scores\asset\pdp9.jpg" alt=""><p>zReeZ_</p><p>2:50.573</p></div>
     </div>
 
     </section>
