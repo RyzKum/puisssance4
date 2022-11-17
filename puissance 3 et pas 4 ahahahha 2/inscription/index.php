@@ -24,52 +24,51 @@
             $mdp = htmlspecialchars($_POST['mot-de-passe']);
             $confmdp = htmlspecialchars($_POST['conf-mdp']);
             $dateInscri = date('d/m/Y h:i:s');
-
-
            
             $regex = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
-            
+            $regexMdp = "/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).{8,}$/";
 
             
 
-            // if(preg_match($regex, $email) == TRUE){
+            // if(preg_match($regexMdp, $mdp)){
             //     echo 'sa marche';
             // }else{
             //     echo'ca marche pas';
             // }
 
+            if(strlen($pseudo) < 4){
+                echo'Pseudo trop court 4 min';
+            }else{
 
-            
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
-                if($mdp == $confmdp){
-                    if (strlen($mdp) < 8) {
-                        echo'Le mot de passe doit faire au minimum 8 caractères';
-                    }else{
-                        
-                        $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
-                        $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+                    if($mdp == $confmdp ){
+                        if (strlen($mdp) < 8) {
+                            echo'Le mot de passe doit faire au minimum 8 caractères';
+                        }else{
+                            
+                            $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+                            $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+                        }
+                    
+        
                     }
-                
+                    else{
+                        echo'mot de passe différent';
+                    }
     
+                } else {
+                    echo "C'est une adresse mail non valide";
                 }
-                else{
-                    echo'mot de passe différent';
-                }
-
-            } else {
-                echo "C'est une adresse mail non valide";
             }
-
-
-
+            
         }
         else{
             echo 'Veuillez remplir les champs demandés';
         }
     }
-
+        
+    
 
     ?>
 
