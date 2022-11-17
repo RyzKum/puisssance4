@@ -54,7 +54,7 @@
     <div class="ranking">
         <div class="position"><p>4eme</p><img src="..\scores\assetpdp4.jfif" alt=""><p>KendiX</p><p>2:00.310</p></div>
         <div class="position"><p>5eme</p><img src="..\asset\pdp5.png" alt=""><p>Xeno</p><p>2:05.850</p></div>
-        <div class="position"><p>6eme</p><img src="pdp6.png" alt=""><p>SL1D3R</p><p>2:08.610</p></div>
+        <div class="position"><p>6eme</p><img src="\pdp6.png" alt=""><p>SL1D3R</p><p>2:08.610</p></div>
         <div class="position"><p>7eme</p><img src="pdp7.png" alt=""><p>TroniiX</p><p>2:15.420</p></div>
         <div class="position"><p>8eme</p><img src="pdp8.png" alt=""><p>AKUMA</p><p>2:17.050</p></div>
         <div class="position"><p>9eme</p><img src="pdp9.jpg" alt=""><p>zReeZ_</p><p>2:50.573</p></div>
