@@ -2,12 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page de Connexion</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <?php
+
+    
     $user = "root";
     $pass = "root";
     $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
@@ -21,23 +23,51 @@
             $pseudo = htmlspecialchars($_POST['pseudo']);
             $mdp = htmlspecialchars($_POST['mot-de-passe']);
             $confmdp = htmlspecialchars($_POST['conf-mdp']);
+            $dateInscri = date('d/m/Y h:i:s');
 
-            if($mdp == $confmdp){
 
-                $dateInscri = date('d/m/Y h:i:s');
-                $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
-                $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+           
+            $regex = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
+            
+
+            
+
+            if(preg_match($regex, $email) == TRUE){
+                echo 'sa marche';
+            }else{
+                echo'ca marche pas';
             }
-            else{
-                echo'mot de passe différent';
-            }
 
-        }
-        else{
-            echo 'Veuillez remplir les champs demandés';
 
-        }
+            
+
+        //     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        //         echo "C'est une adresse mail valide";
+        //     } else {
+        //         echo "C'est une adresse mail non valide";
+        //     }
+
+        //     if($mdp == $confmdp){
+        //         if (strlen($mdp) < 8) {
+        //             echo'Le mot de passe doit faire au minimum 8 caractères';
+        //         }else{
+                    
+        //             $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+        //             $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+        //         }
+            
+
+        //     }
+        //     else{
+        //         echo'mot de passe différent';
+        //     }
+
+        // }
+        // else{
+        //     echo 'Veuillez remplir les champs demandés';
+        // }
     }
+}
 
     ?>
 
