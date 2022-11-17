@@ -32,35 +32,37 @@
 
             
 
-            if(preg_match($regex, $email) == TRUE){
-                echo 'sa marche';
-            }else{
-                echo'ca marche pas';
-            }
+            // if(preg_match($regex, $email) == TRUE){
+            //     echo 'sa marche';
+            // }else{
+            //     echo'ca marche pas';
+            // }
 
 
             
 
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                echo "C'est une adresse mail valide";
+
+                if($mdp == $confmdp){
+                    if (strlen($mdp) < 8) {
+                        echo'Le mot de passe doit faire au minimum 8 caractères';
+                    }else{
+                        
+                        $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+                        $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+                    }
+                
+    
+                }
+                else{
+                    echo'mot de passe différent';
+                }
+
             } else {
                 echo "C'est une adresse mail non valide";
             }
 
-            if($mdp == $confmdp){
-                if (strlen($mdp) < 8) {
-                    echo'Le mot de passe doit faire au minimum 8 caractères';
-                }else{
-                    
-                    $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
-                    $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
-                }
-            
 
-            }
-            else{
-                echo'mot de passe différent';
-            }
 
         }
         else{
