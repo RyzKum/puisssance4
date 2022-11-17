@@ -1,3 +1,6 @@
+<?php
+    require "../view/header.inc.php";
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,32 +13,7 @@
 </head>
 
 <body>
-    <div class="imageheader">
-    <header>
-
-        <p id="montitre">The Power Of Memory</p>
-        <nav>
-        <a class="headerBtn" href="../puissance 3 et pas 4 ahahahha 2/index.php">ACCUEIL</a>
-            <a class="headerBtn" href="../inscription/index.php">S'INSCRIRE</a>
-            <a class="headerBtn" href="../login/index.php">SCORES</a>
-            <a class="headerBtn" href="../../puissance 3 et pas 4 ahahahha 2/contact/contact.php">CONTACTER</a>
-        </nav>
-
-    </header>
-        <div class="studio">
-        <h3 id="text1">BIENVENUE DANS NOTRE STUDIO!</h2> 
-        <h4 id="text2">Venez challenger les cerveaux les plus agile !</h4>
-        <div id="jouer">
-            <p  class="bouton" > <a id="ancreJouer"href="../login/index.html">JOUER !</a> </p> 
-        </div>
-        </div>
-        
-
-    </div>
-
-
     
-
     <div class="image2">
         <img class="mid1" src="asset/retro.jpg" alt="">
         <img class="mid2" src="asset/dabbing-man.jpg" alt="">
@@ -171,48 +149,9 @@
             </div>
          </div>
     </section>
-
-
-
-    <section class="ses5">
-    <footer>
-        <div id="footerPart1">
-            <div id="info">
-                <p>Information</p>
-                <p>Quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-                <p><span class="infoOrange">Tel : </span><span class="tex"> 05 04 03 02</p>
-                <p><span class="infoOrange">Email :</span> support@powerofmemory.com</p>
-                <p><span class="infoOrange">Location : </span>Paris</p>
-                <div id="reseau">
-                    <div class="logoOrange"><img src="asset/logo-instagram.png" class="tailleImage"></img></div>
-                    <div class="logoOrange"><img src="asset/twit.jpeg" class="tailleImage"></img></div>
-                    <div class="logoOrange"><img src="asset/Google__G__Logo.svg.png" class="tailleImage"></img></div>
-                    <div class="logoOrange"><img src="asset/pint.png" class="tailleImage"></img></div>
-                    <div class="logoOrange"><img src="asset/Instagram_icon.png.webp" class="tailleImage"></img></div>
-                </div>
-            </div>
-
-            <div id="power">
-                <p>Power Of Memory</p>
-                <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.html">Jouer ! </a> </p>
-                <p><span class="pointOrange">▪</span> <a class="loot" href="../login/index.html">Les scores</a></p>
-                <p><span class="pointOrange">▪</span> <a class="loot" href="../../puissance 3 et pas 4 ahahahha 2/contact/contact.html">Nous contacter </a></p>
-
-            </div>
-        </div>
-
-        <div id="footerPart2">
-            <p id="copyRight">Copyright © 2022 Tous droits réservés</p>
-        </div>
-    </footer>
-    <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
-    <div id="hautDuTriangle">
-        <input id="ecriture" type="text" placeholder="message">
-    </div>
-    <div id="triangleChat"></div>
-    <p id="pChat"><img id="iconeChat"src="asset/iconeChat.webp" alt=""></p>
-
-</section>
+    <?php
+    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
+    ?>
 
 <script src="index.js"></script>
 
