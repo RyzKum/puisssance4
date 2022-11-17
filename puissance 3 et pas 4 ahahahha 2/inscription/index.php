@@ -41,33 +41,33 @@
 
             
 
-        //     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        //         echo "C'est une adresse mail valide";
-        //     } else {
-        //         echo "C'est une adresse mail non valide";
-        //     }
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo "C'est une adresse mail valide";
+            } else {
+                echo "C'est une adresse mail non valide";
+            }
 
-        //     if($mdp == $confmdp){
-        //         if (strlen($mdp) < 8) {
-        //             echo'Le mot de passe doit faire au minimum 8 caractères';
-        //         }else{
+            if($mdp == $confmdp){
+                if (strlen($mdp) < 8) {
+                    echo'Le mot de passe doit faire au minimum 8 caractères';
+                }else{
                     
-        //             $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
-        //             $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
-        //         }
+                    $insertUser = $dbh->prepare('INSERT INTO inscription(Usermail,Pseudo,mdp,dateIncri) VALUES (?,?,?,?)');
+                    $insertUser-> execute(array($email,$pseudo,$mdp,$dateInscri));
+                }
             
 
-        //     }
-        //     else{
-        //         echo'mot de passe différent';
-        //     }
+            }
+            else{
+                echo'mot de passe différent';
+            }
 
-        // }
-        // else{
-        //     echo 'Veuillez remplir les champs demandés';
-        // }
+        }
+        else{
+            echo 'Veuillez remplir les champs demandés';
+        }
     }
-}
+
 
     ?>
 
