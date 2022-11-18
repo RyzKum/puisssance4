@@ -23,7 +23,7 @@ INSERT INTO `jeu` (`id`, `nom_jeu`) VALUES ('4', 'The Tower of memory');
 SELECT * FROM `utlisateur` WHERE `email` = 'baptiste@gmail.com' AND `mot_de_passe` = 'ptdrlo';
 
 /* requette message 24h (pas finis)*/
-SELECT * FROM `message(tchat)` WHERE date_heure_mess 
+SELECT * FROM `message(tchat)` WHERE date_heure_mess < 24; 
 
 /* trier du plus récent au plus vieux */
 SELECT * FROM `message(tchat)` ORDER BY `date_heure_mess` DESC
