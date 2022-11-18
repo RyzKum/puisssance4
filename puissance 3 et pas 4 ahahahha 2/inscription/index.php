@@ -39,6 +39,25 @@ require "../view/header.inc.php";
             //     echo'ca marche pas';
             // }
 
+            //if (isset($_POST['mot-de-passe'])){
+               // if (preg_match("#^[a-zA-Z0-9#]+$#", $mdp, $matches)){
+                   // echo "mdp valide";
+            
+               // }
+            
+               // else{
+                 //   echo "mdp non valide";
+              //  }
+                
+           // }
+
+           if (!preg_match('/[a-z]/', $mdp) || !preg_match('/[A-Z]/', $mdp) || !preg_match('/\d/', $mdp) || !preg_match('/[^a-zA-Z\d]/', $mdp))
+            {
+            echo "Le mot de passer doit contenir au moins une minuscule, une majuscule, un chiffre et un caractère spécial";
+        }
+
+
+
             if(strlen($pseudo) < 4){
                 echo'Pseudo trop court 4 min';
             }else{
@@ -71,6 +90,7 @@ require "../view/header.inc.php";
         }
     }
         
+
     
 
     ?>
