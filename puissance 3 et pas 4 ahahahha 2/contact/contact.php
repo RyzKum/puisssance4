@@ -53,7 +53,7 @@
         </div>
     </main>
     <?php
-    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
+    require "../view/footer.inc.php";
     ?>
 </body>
 </html>
