@@ -13,9 +13,9 @@ body{
 .imageheader{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 700px;
+  height: 100vh;
   background-image: url("asset/landing.jpg" );
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
@@ -481,6 +481,8 @@ color: white;
 }
 .headerBtn:hover{
   color: orange;
+  border-top: 2px solid orange; /* Ajoute un bord en haut */
+  padding-block-start: 6px; /* choisi la distance du bord */
 }
 
 #triangleChat{
@@ -541,8 +543,9 @@ color: white;
  .haut{
   display: flex;
   justify-content: space-between;
-   background-color: rgb(20, 18, 49);
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+  background-color: rgb(20, 18, 49);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   #montitre{
@@ -555,11 +558,11 @@ color: white;
   .acc{
   margin-right: 30px;
   margin-top: 15px;
+  margin-bottom: 25px;
   color: aliceblue;
   }
   .acc a{
       text-decoration: none;
       color: white;
       margin-left: 1cm;
-      
   }

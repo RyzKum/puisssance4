@@ -1,174 +1,187 @@
-body{
-    background-color : rgb(20,18,49);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+  background-color: rgb(20, 18, 49);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 .formBlock {
 
-    width: 100%;
-    background-color: rgb(15,14,46);
-    height: 200px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: rgb(15, 14, 46);
+  height: 200px;
+  display: flex;
+  justify-content: center;
 
 }
 
 
-.form{
-    display :flex;
-    flex-direction: column;
-    justify-content: center;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
-.bouton2{
-    background-color: rgb(236, 145, 36);
-    color: white;
-    width: 80px;
-    height: 35px;
+.bouton2 {
+  background-color: rgb(236, 145, 36);
+  color: white;
+  width: 80px;
+  height: 35px;
 }
 
 
-form input{
-    color: white;
-    margin-top: 10px;
-    background-color: rgba(40, 45, 79, 0.757);
-    border: none;
-    width: 280px;
-    height: 50px;
-    border-radius: 2px;
+form input {
+  color: white;
+  margin-top: 10px;
+  background-color: rgba(40, 45, 79, 0.757);
+  border: none;
+  width: 280px;
+  height: 50px;
+  border-radius: 2px;
 }
 
-.haut{
-        display: flex;
-        justify-content: space-between;
-         background-color: rgb(20, 18, 49);
-        }
-        
-        #montitre{
-        font-size: large;
-        margin-left: 20%;
-        width: 100%;
-        display: flex;
-        color: aliceblue;
-        }
-        .acc{
-        margin-right: 30px;
-        margin-top: 15px;
-        color: aliceblue;
-        }
-
-.h1{
-   
-    color: white;
-    font-weight: bold;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.haut {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(20, 18, 49);
 }
 
-.acc a{
-    text-decoration: none;
-    color: white;
-    margin-left: 1cm;
-}
-.fond1{
-background-image: url(https://as1.ftcdn.net/v2/jpg/02/38/67/72/1000_F_238677249_c5YBB99scr6fzuYa4lH1Rlj0EwnA3CHW.jpg);
-height: 200px;
-opacity: 80%;
-width: 100%;
-    
-
+#montitre {
+  font-size: large;
+  margin-left: 20%;
+  width: 100%;
+  display: flex;
+  color: aliceblue;
 }
 
-.fond2{
-    background-color: rgb(15, 14, 44);
-    height: 250px;
+.acc {
+  margin-right: 30px;
+  margin-top: 15px;
+  color: aliceblue;
 }
 
-#footerPart1{
-    width: 70%;
-    height: min-content;
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  #reseau{
-    display: flex;
-    width:min-content;
-  }
-  
-  .logoOrange{
-    background-color: orange;
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tailleImage{
-  
-    height: 30px;
-    width: 30px;
-  }
-  
-  .pointOrange{
-    color: orange;
-  }
-  
-  .infoOrange{
-    
-    color: orange;
-    font-weight: bold;
-  }
-  
-  #copyRight{
-    margin-left: 10%;
-    margin-top: 5%;
-  } 
-  
-  .ses5{
-  background-color: rgb(14,11,41);
-  }
-  
-  #info p{
-    color: aliceblue;
-    margin-bottom: 15px;
-  }
-  
-  #power p {
-    color: aliceblue;
-    margin-top: 15px;
-  }
-  
-  #info{
-    margin-top: 5%;
-  }
-  
-  #power{
-    margin-top: 5%;
-  }
-  
-  #copyRight {
-    color: aliceblue;
-  }
-  
-  #footerPart2{
-    margin-bottom: 5%;
-  }
+.h1 {
 
-  .loot{
-    text-decoration: none;
-    color: white;
-    }
+  color: white;
+  font-weight: bold;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .gotopbtn {     position: fixed;     width: 50px;     height: 50px;     background-color: orange;     bottom: 40px;     right: 50px;      text-decoration: none;     text-align: center;     line-height: 50px;     color: white;     font-size: 22px;      opacity: 50%; }
+.acc a {
+  text-decoration: none;
+  color: white;
+  margin-left: 1cm;
+}
 
-.headerBtn:hover{
+.fond1 {
+  background-image: url(https://as1.ftcdn.net/v2/jpg/02/38/67/72/1000_F_238677249_c5YBB99scr6fzuYa4lH1Rlj0EwnA3CHW.jpg);
+  height: 200px;
+  opacity: 80%;
+  width: 100%;
+}
+
+.fond2 {
+  background-color: rgb(15, 14, 44);
+  height: 250px;
+}
+
+#footerPart1 {
+  width: 70%;
+  height: min-content;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#reseau {
+  display: flex;
+  width: min-content;
+}
+
+.logoOrange {
+  background-color: orange;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tailleImage {
+
+  height: 30px;
+  width: 30px;
+}
+
+.pointOrange {
+  color: orange;
+}
+
+.infoOrange {
+
+  color: orange;
+  font-weight: bold;
+}
+
+#copyRight {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.ses5 {
+  background-color: rgb(14, 11, 41);
+}
+
+#info p {
+  color: aliceblue;
+  margin-bottom: 15px;
+}
+
+#power p {
+  color: aliceblue;
+  margin-top: 15px;
+}
+
+#info {
+  margin-top: 5%;
+}
+
+#power {
+  margin-top: 5%;
+}
+
+#copyRight {
+  color: aliceblue;
+}
+
+#footerPart2 {
+  margin-bottom: 5%;
+}
+
+.loot {
+  text-decoration: none;
+  color: white;
+}
+
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  opacity: 50%;
+}
+
+.headerBtn:hover {
   color: orange;
 }
