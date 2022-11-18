@@ -38,8 +38,10 @@
 
             $sth->execute([$email, $mdp]);
 
-            $affichage = $sth->fetch();
+            $affichage = $sth->fetch(PDO::FETCH_ASSOC);
             // print_r($affichage);die();
+            $taffichage = "$affichage";
+            echo "$taffichage";
 
 
 
