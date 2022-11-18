@@ -53,7 +53,7 @@ require "../view/header.inc.php";
 
     </section>
     <?php
-    require "../view/header.inc.php";
+    require "../view/footer.inc.php";
     ?>
 </body>
 </html>
