@@ -31,14 +31,6 @@
         
 
     </div>
-
-<div class="studio">
-        <h3 id="text1">BIENVENUE DANS NOTRE STUDIO!</h2> 
-        <h4 id="text2">Venez challenger les cerveaux les plus agile !</h4>
-        <div id="jouer">
-            <p  class="bouton" > <a id="ancreJouer"href="../login/index.html">JOUER !</a> </p> 
-        </div>
-        </div>
     
     <div class="image2">
         <img class="mid1" src="asset/retro.jpg" alt="">
