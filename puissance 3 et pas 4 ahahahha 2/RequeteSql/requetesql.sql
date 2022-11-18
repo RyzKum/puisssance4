@@ -22,3 +22,6 @@ INSERT INTO `jeu` (`id`, `nom_jeu`) VALUES ('4', 'The Tower of memory');
 
 SELECT * FROM `utlisateur` WHERE `email` = 'baptiste@gmail.com' AND `mot_de_passe` = 'ptdrlo';
 
+/* requette message 24h*/
+
+
