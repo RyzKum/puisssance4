@@ -176,7 +176,7 @@
          </div>
     </section>
     <?php
-    require "/Applications/MAMP/htdocs/github/puisssance4/puissance 3 et pas 4 ahahahha 2/view/footer.inc.php";
+     require "../view/footer.inc.php";
     ?>
 
 <script src="index.js"></script>
