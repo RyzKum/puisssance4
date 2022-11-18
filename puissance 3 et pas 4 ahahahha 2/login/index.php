@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+
+<?php
+
+    
+    $user = "root";
+    $pass = "root";
+    $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
+
+
+    if(isset($_POST['submit']) ){
+        if(!empty($_POST['email']) AND !empty($_POST['mot-de-passe'])){
+
+            
+            $email = htmlspecialchars($_POST['email']);
+            $mdp = htmlspecialchars($_POST['mot-de-passe']);
+
+
+
+            // echo"$email";
+            // echo"$mdp";
+          
+            // $insertUser = $dbh->prepare('');
+            // $insertUser-> execute(array($email,$pseudo));
+
+            $sth = $dbh->prepare('SELECT *
+                FROM inscription
+                WHERE Usermail = ?  AND mdp = ?');
+
+            $sth->execute([$email, $mdp]);
+
+            $affichage = $sth->fetch();
+            // print_r($affichage);die();
+
+
+
+
+
+                    
+        }
+        else{
+            echo 'Veuillez remplir les champs demandés';
+        }
+    }
+        
+    
+
+    ?>
     <nav class="haut">
         <div>
         <p id="montitre">The Power Of Memory</p>
@@ -25,11 +73,11 @@
 
     <section class="formBlock">
 
-        <form action="post" class="form">
+        <form method="POST" action="" class="form">
 
-            <input class="mail" type="email" placeholder="Email" maxlength="30">
-            <input class="mdp" type="password" placeholder="Mot de passe">
-            <input class="bouton2" type="submit" value="Connexion">
+            <input class="mail" type="email" placeholder="Email" maxlength="30" name = "email">
+            <input class="mdp" type="password" placeholder="Mot de passe" name="mot-de-passe">
+            <input class="bouton2" type="submit"  name="submit" value="Connexion">
         </form>
 
     </section>
