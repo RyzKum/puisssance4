@@ -25,4 +25,8 @@ SELECT * FROM `utlisateur` WHERE `email` = 'baptiste@gmail.com' AND `mot_de_pass
 /* requette message 24h (pas finis)*/
 SELECT * FROM `message(tchat)` WHERE date_heure_mess 
 
+/* trier du plus récent au plus vieux */
+SELECT * FROM `message(tchat)` ORDER BY `date_heure_mess` DESC
+
+
 
