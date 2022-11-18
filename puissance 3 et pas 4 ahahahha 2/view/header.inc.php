@@ -12,10 +12,9 @@
         <div class="acc">
         <a class="headerBtn" href="../accueil/index.php">ACCUEIL</a>
             <a class="headerBtn" href="../inscription/index.php">S'INSCRIRE</a>
-            <a class="headerBtn" href="../login/index.php">SCORES</a>
+            <a class="headerBtn" href="../login/index.php">SE CONNECTER</a>
             <a class="headerBtn" href="../contact/contact.php">CONTACTER</a>
             <a class="headerBtn" href="../scores/scores.php">SCORES</a>
-            <a class="headerBtn" href="../login/in.php">SE CONNECTER</a>
             
         </div>  
  </nav>
