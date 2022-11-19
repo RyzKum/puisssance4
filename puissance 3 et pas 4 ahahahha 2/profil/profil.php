@@ -3,19 +3,20 @@ $user = "root";
 $pass = "root";
 $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
 
+
+
 if(isset($_POST['submit']) ){
     $mdp = htmlspecialchars($_POST['mot-de-passe']);
-    $confmdp = htmlspecialchars($_POST['conf-mdp']);
+    // $confmdp = htmlspecialchars($_POST['conf-mdp']);
     $email = htmlspecialchars($_POST['email']);
     $newemail = htmlspecialchars($_POST['newemail']);
-   
+    $confmdp = htmlspecialchars($_POST['confMdp']);
     $regexMail = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
     $regexMdp = "/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).{8,}$/";
 
-
     //La partie ou lon modifie uniquemement le mail
 
-    if(!empty($email) AND !empty($mdp)){
+    if(!empty($email) AND !empty($mdp) AND !empty($newemail) AND !empty($confmdp)){
 
         $email = htmlspecialchars($_POST['email']);
         $mdp = htmlspecialchars($_POST['mot-de-passe']);
@@ -40,28 +41,42 @@ if(isset($_POST['submit']) ){
             $verifEmail->execute([$email]);
             $affichage = $verifEmail->fetch();
             $recupid = $affichage[0];
-            
+            $recupidInt = intval($recupid);
             // $recupid est une string il faut la convertir en int;
 
-            echo gettype($recupid);
+            // echo gettype($recupidInt);
 
             
             $verifMdp = $dbh->prepare("SELECT mdp FROM inscription WHERE id = ?");
-            $verifMdp->execute([$recupid]);
+            $verifMdp->execute([$recupidInt]);
             $affichagetabmdp = $verifMdp->fetch();
-            $affichagemdp = $affichagetabmdp[3];
 
-            echo $affichagemdp;
+            // print_r($affichagetabmdp[0]);
+
+            $affichagemdp = $affichagetabmdp[0];
+
 
             if($affichagemdp == $mdp){
 
-                $updateEmail = $dbh->prepare('UPDATE inscription SET Usermail = ? WHERE id = ?');
-                $updateEmail->execute([$newemail,$recupid]);
+                if($mdp == $confmdp){
+
+                    $updateEmail = $dbh->prepare('UPDATE inscription SET Usermail = ? WHERE id = ?');
+                    $updateEmail->execute([$newemail,$recupid]);
+
+                }
+                else{
+                    echo'<p class="phpConfMdp">Veuillez confirmer votre mot de passe<p>';
+                }
+
+
 
             }
 
         }
 
+    }
+    else {
+        echo '<p class="phpConfMdp">Veuillez insérer les champs demandés<p>';
     }
 
 }
@@ -89,13 +104,13 @@ if(isset($_POST['submit']) ){
 
 
     <section class="formBlock">
-        <form action="post" class="form">
+        <form action="" class="form" method ="POST">
             <p class="text12">Souhaitez vous changer d'email ?</p>
-            <input class="mail" type="email" placeholder="Ancien Email" maxlength="30">
-            <input class="mdp" type="email" placeholder="Nouveau Email">
-            <input class="mdp" type="password" placeholder="Mot de passe">
-            <input class="mdp" type="password" placeholder="Confirmer Mot de passe">
-            <input class="bouton2" type="submit" value="Confirmer">
+            <input class="mail" type="email" placeholder="Ancien Email" name="email"maxlength="30">
+            <input class="mdp" type="email" placeholder="Nouveau Email" name="newemail">
+            <input class="mdp" type="password" placeholder="Mot de passe" name="mot-de-passe">
+            <input class="mdp" type="password" placeholder="Confirmer Mot de passe" name="confMdp">
+            <input class="bouton2" type="submit" value="Confirmer" name ="submit">
         </form>
         <form action="post" class="form1">
             <p class="text12">Souhaitez vous changer de mot de passe ?</p>

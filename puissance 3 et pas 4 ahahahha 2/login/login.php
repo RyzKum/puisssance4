@@ -44,7 +44,7 @@
             if(gettype($affichage)== "array"){
 
                 echo'<p id="phpConnect">Connection profil</p>';
-                header('Location: http://www.votresite.com/pageprotegee.php');
+                header('Location: http://puissance4/puisssance4/puissance%203%20et%20pas%204%20ahahahha%202/profil/profil.php');
                 exit();
 
 
