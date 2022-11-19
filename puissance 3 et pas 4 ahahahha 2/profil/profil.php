@@ -1,31 +1,71 @@
 <?php
+$user = "root";
+$pass = "root";
+$dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'basep4';
+if(isset($_POST['submit']) ){
+    $mdp = htmlspecialchars($_POST['mot-de-passe']);
+    $confmdp = htmlspecialchars($_POST['conf-mdp']);
+    $email = htmlspecialchars($_POST['email']);
+    $newemail = htmlspecialchars($_POST['newemail']);
+   
+    $regexMail = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
+    $regexMdp = "/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).{8,}$/";
 
-$mysqli = @new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db
-);
 
-if ($mysqli->connect_error) {
-  echo 'Errno: '.$mysqli->connect_errno;
-  echo '<br>';
-  echo 'Error: '.$mysqli->connect_error;
-  exit();
+    //La partie ou lon modifie uniquemement le mail
+
+    if(!empty($email) AND !empty($mdp)){
+
+        $email = htmlspecialchars($_POST['email']);
+        $mdp = htmlspecialchars($_POST['mot-de-passe']);
+
+        //Check si la base à un mail qui corespond au mdp tape 
+
+        $sth = $dbh->prepare('SELECT *
+            FROM inscription
+            WHERE Usermail = ?  AND mdp = ?');
+
+        $sth->execute([$email, $mdp]);
+
+        $affichage = $sth->fetch();
+
+        if(gettype($affichage)== "boolean"){
+            echo 'Veuillez vous inscrire';
+        }
+
+        if(gettype($affichage)== "array"){
+
+            $verifEmail = $dbh->prepare('SELECT id FROM inscription WHERE Usermail = ?');
+            $verifEmail->execute([$email]);
+            $affichage = $verifEmail->fetch();
+            $recupid = $affichage[0];
+            
+            // $recupid est une string il faut la convertir en int;
+
+            echo gettype($recupid);
+
+            
+            $verifMdp = $dbh->prepare("SELECT mdp FROM inscription WHERE id = ?");
+            $verifMdp->execute([$recupid]);
+            $affichagetabmdp = $verifMdp->fetch();
+            $affichagemdp = $affichagetabmdp[3];
+
+            echo $affichagemdp;
+
+            if($affichagemdp == $mdp){
+
+                $updateEmail = $dbh->prepare('UPDATE inscription SET Usermail = ? WHERE id = ?');
+                $updateEmail->execute([$newemail,$recupid]);
+
+            }
+
+        }
+
+    }
+
 }
 
-echo 'Success: A proper connection to MySQL was made.';
-echo '<br>';
-echo 'Host information: '.$mysqli->host_info;
-echo '<br>';
-echo 'Protocol version: '.$mysqli->protocol_version;
-
-$mysqli->close();
 ?>
 
 

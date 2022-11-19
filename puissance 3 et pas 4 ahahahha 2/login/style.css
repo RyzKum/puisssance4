@@ -185,3 +185,17 @@ form input {
 .headerBtn:hover {
   color: orange;
 }
+
+#phpInscri{
+  color: red;
+  font-size: 20px;
+  margin: auto auto auto auto;
+  width: 170px;
+}
+
+#phpConnect{
+  color: green;
+  font-size: 20px;
+  margin: auto auto auto auto;
+  width: 220px;
+}
