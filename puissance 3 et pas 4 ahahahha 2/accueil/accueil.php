@@ -192,6 +192,12 @@
                 </div>
             </div>
         </div>
+
+        <div id="hautDuTriangle">
+        <input id="ecriture" type="text" placeholder="message">
+    </div>
+    <div id="triangleChat"></div>
+    <p id="pChat"><img id="iconeChat"src="asset/iconeChat.webp" alt=""></p>
     </section>
     <?php
     require "../view/footer.inc.php";
