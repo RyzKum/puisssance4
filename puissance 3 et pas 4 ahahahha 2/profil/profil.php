@@ -3,7 +3,7 @@ $user = "root";
 $pass = "root";
 $dbh = new PDO('mysql:host=localhost;dbname=databaseprojet', $user, $pass);
 
-
+//La partie ou lon modifie uniquemement le mail
 
 if(isset($_POST['submit']) ){
     $mdp = htmlspecialchars($_POST['mot-de-passe']);
@@ -14,7 +14,7 @@ if(isset($_POST['submit']) ){
     $regexMail = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
     $regexMdp = "/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).{8,}$/";
 
-    //La partie ou lon modifie uniquemement le mail
+    
 
     if(!empty($email) AND !empty($mdp) AND !empty($newemail) AND !empty($confmdp)){
 
@@ -42,16 +42,11 @@ if(isset($_POST['submit']) ){
             $affichage = $verifEmail->fetch();
             $recupid = $affichage[0];
             $recupidInt = intval($recupid);
-            // $recupid est une string il faut la convertir en int;
 
-            // echo gettype($recupidInt);
-
-            
             $verifMdp = $dbh->prepare("SELECT mdp FROM inscription WHERE id = ?");
             $verifMdp->execute([$recupidInt]);
             $affichagetabmdp = $verifMdp->fetch();
 
-            // print_r($affichagetabmdp[0]);
 
             $affichagemdp = $affichagetabmdp[0];
 
@@ -71,6 +66,83 @@ if(isset($_POST['submit']) ){
 
 
             }
+
+        }
+
+    }
+    else {
+        echo '<p class="phpConfMdp">Veuillez insérer les champs demandés<p>';
+    }
+
+}
+
+// Partie changement de mot de passe
+
+if(isset($_POST['sub']) ){
+
+    $emailMdp = htmlspecialchars($_POST['mailMdp']);
+    $oldMdp = htmlspecialchars($_POST['oldMpd']);
+    $changeMdp = htmlspecialchars($_POST['changeMdp']);
+    
+
+    $regexMail = "/^([a-zA-Z0-9.]+@+[a-zA-Z]+(.)+[a-zA-Z]{2,3})$/";
+    $regexMdp = "/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).{8,}$/";
+
+
+
+    if(!empty($emailMdp) AND !empty($oldMdp) AND !empty($changeMdp)){
+
+        //Check si la base à un mail qui corespond au mdp tape 
+
+        $sth = $dbh->prepare('SELECT *
+            FROM inscription
+            WHERE Usermail = ?  AND mdp = ?');
+
+        $sth->execute([$emailMdp, $oldMdp]);
+
+        $affichage = $sth->fetch();
+
+        if(gettype($affichage)== "boolean"){
+            echo 'Le mail ou l\'ancien mot de passe que vous avez tapé n\'est pas bon';
+        }
+
+        if(gettype($affichage)== "array"){
+
+            $verifEmail = $dbh->prepare('SELECT id FROM inscription WHERE Usermail = ?');
+            $verifEmail->execute([$emailMdp]);
+            $affichage = $verifEmail->fetch();
+            $recupid = $affichage[0];
+            $recupidInt = intval($recupid);
+
+            // La faut mettre la commande sql dupdate
+
+            $verifMdp = $dbh->prepare("UPDATE inscription SET mdp = ? WHERE id=?;");
+            $verifMdp->execute([$changeMdp,$recupidInt]);
+
+
+
+            
+            // $affichagetabmdp = $verifMdp->fetch();
+
+
+            // $affichagemdp = $affichagetabmdp[0];
+
+
+            // if($affichagemdp == $mdp){
+
+            //     if($mdp == $confmdp){
+
+            //         $updateEmail = $dbh->prepare('UPDATE inscription SET Usermail = ? WHERE id = ?');
+            //         $updateEmail->execute([$newemail,$recupid]);
+
+            //     }
+            //     else{
+            //         echo'<p class="phpConfMdp">Veuillez confirmer votre mot de passe<p>';
+            //     };
+
+
+
+            // }
 
         }
 
@@ -112,12 +184,13 @@ if(isset($_POST['submit']) ){
             <input class="mdp" type="password" placeholder="Confirmer Mot de passe" name="confMdp">
             <input class="bouton2" type="submit" value="Confirmer" name ="submit">
         </form>
-        <form action="post" class="form1">
+        <form action="" class="form1" method ="POST">
             <p class="text12">Souhaitez vous changer de mot de passe ?</p>
-            <input class="mail" type="password" placeholder="Ancien Mot de passe" maxlength="30">
-            <input class="mdp" type="password" placeholder="Nouveau Mot de passe">
-            <input class="mdp" type="password" placeholder="Confirmer Mot de passe">
-            <input class="bouton2" type="submit" value="Confirmer">
+            <input class="mdp" type="email" placeholder="Email" name="mailMdp">
+            <input class="mail" type="password" placeholder="Ancien Mot de passe" name="oldMpd"maxlength="30">
+            <input class="mdp" type="password" placeholder="Nouveau Mot de passe" name="changeMdp">
+            
+            <input class="bouton2" type="submit" value="Confirmer" name="sub">
         </form>
 
     </section>
