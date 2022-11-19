@@ -37,17 +37,17 @@
 
             $affichage = $sth->fetch();
 
-            if(gettype($affichage)== "boolean"){
+            if (gettype($affichage) == "boolean") {
                 echo '<p id="phpInscri">Veuillez vous inscrire</p>';
             }
 
-            if(gettype($affichage)== "array"){
+            if (gettype($affichage) == "array") {
 
-                echo'<p id="phpConnect">Connection profil</p>';
+                echo '<p id="phpConnect">Connection profil</p>';
                 header('Location: http://puissance4/puisssance4/puissance%203%20et%20pas%204%20ahahahha%202/profil/profil.php');
                 exit();
-
-
+                //header('Location: http://localhost:8888/puisssance4/puissance%203%20et%20pas%204%20ahahahha%202/profil/profil.php');
+                //exit();
             }
 
         } else {
