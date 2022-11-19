@@ -29,28 +29,26 @@
             $mdp = htmlspecialchars($_POST['mot-de-passe']);
 
 
-
-            // echo"$email";
-            // echo"$mdp";
-    
-            // $insertUser = $dbh->prepare('');
-            // $insertUser-> execute(array($email,$pseudo));
-    
             $sth = $dbh->prepare('SELECT *
                 FROM inscription
                 WHERE Usermail = ?  AND mdp = ?');
 
             $sth->execute([$email, $mdp]);
 
-            $affichage = $sth->fetch(PDO::FETCH_ASSOC);
-            // print_r($affichage);die();
-            $taffichage = "$affichage";
-            echo "$taffichage";
+            $affichage = $sth->fetch();
+
+            if(gettype($affichage)== "boolean"){
+                echo '<p id="phpInscri">Veuillez vous inscrire</p>';
+            }
+
+            if(gettype($affichage)== "array"){
+
+                echo'<p id="phpConnect">Connection profil</p>';
+                header('Location: http://www.votresite.com/pageprotegee.php');
+                exit();
 
 
-
-
-
+            }
 
         } else {
             echo 'Veuillez remplir les champs demandés';
