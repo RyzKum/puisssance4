@@ -13,9 +13,9 @@
         </div>
 
         <div class="acc">
-            <a class="headerBtn" href="../accueil/index.php">ACCUEIL</a>
-            <a class="headerBtn" href="../inscription/index.php">S'INSCRIRE</a>
-            <a class="headerBtn" href="../login/index.php">SE CONNECTER</a>
+            <a class="headerBtn" href="../accueil/accueil.php">ACCUEIL</a>
+            <a class="headerBtn" href="../inscription/inscription.php">S'INSCRIRE</a>
+            <a class="headerBtn" href="../login/login.php">SE CONNECTER</a>
             <a class="headerBtn" href="../contact/contact.php">CONTACTER</a>
             <a class="headerBtn" href="../scores/scores.php">SCORES</a>
 
