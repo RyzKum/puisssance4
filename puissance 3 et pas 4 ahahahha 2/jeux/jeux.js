@@ -29,18 +29,16 @@ selectTheme.addEventListener("mouseover",()=>{
 
 
 
-selectTheme.addEventListener("mouseout",()=>{
+// selectTheme.addEventListener("click",()=>{
 
-    let compteurClass = document.getElementsByClassName("injectStyle").length;
 
-    for(i = 0;compteurClass<i;i++){
+//     document.getElementsByClassName("injectStyle")[1].remove();
+//     console.log("test")
 
-        document.getElementsByClassName("injectStyle")[i].remove();
-
-    }
+    
     
 
-})
+// })
 
 
 
