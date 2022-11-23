@@ -15,13 +15,11 @@
     ?>
 
 
-<div id="theme">
-
-    <div id="inject">
-        <p class="injectStyle">Disney</p>
-    </div>
-
-</div>
+   <div id="remove">
+        <div id="inject">
+            <p id="pTheme">Themes</p>
+        </div>
+   </div>         
 
     
 

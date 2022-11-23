@@ -1,21 +1,37 @@
-#theme{
-    width: 80%;
-    height: 30px;
-    border-style: solid;
-    margin : auto auto auto auto;
+#remove{
+
+    margin: 50px auto auto auto;
+    width: 20%;
+
+} 
+
+#remove:hover{
+    background-color: gray;
+    cursor: pointer;
 }
 
 #inject {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
     height: 100%;
-    width: 10%;
-    margin : 6px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-#inject p {
-    width: 80px;
-    /* height: 25px; */
+
+
+#remove p {
     text-align: center;
+    color: rebeccapurple;
+}
+
+#pTheme{
+    font-size: 25px;
+}
+
+.injectStyle:hover{
+
+    background-color: orange;
+
 }
