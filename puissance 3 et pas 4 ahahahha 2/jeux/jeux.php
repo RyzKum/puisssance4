@@ -14,14 +14,39 @@
     require "../view/header.inc.php";
     ?>
 
-
-   <div id="remove">
+<div id="remove">
         <div id="inject">
             <p id="pTheme">Themes</p>
         </div>
-   </div>         
+    </div>
 
-    
+
+<div id="jeuxGlobal">
+
+
+    <div id="removeLvL">
+        <div id="injectLvl">
+            <p id="pThemeLvL">Level</p>
+        </div>
+    </div>
+
+    <div id="removeT">
+        <div id="injectTheme">
+            <p id="pThemeLvL">Theme</p>
+        </div>
+    </div>
+
+
+    <div id="removeScore">
+        <div id="injectScore">
+            <p id="pThemeScore">Score</p>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="memory"></div>
 
     
 </body>
