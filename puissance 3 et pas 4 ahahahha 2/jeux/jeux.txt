@@ -1,0 +1,98 @@
+selectTheme = document.getElementById("theme");
+
+selectTheme.addEventListener("mouseover",()=>{
+
+    // insertp = document.getElementById("deroul");
+    insertDisney = document.getElementById("disney");
+    insertTheme = document.getElementsByClassName("menuTheme");
+    checkDefil = document.getElementById("anime");
+    
+
+    if(checkDefil == null){
+
+        divDeroul = document.createElement("div");
+        divDeroul.setAttribute("id","deroul");
+        divDeroul.setAttribute("class","menuTheme");
+        document.body.append(divDeroul);
+
+        insertp = document.getElementById("deroul");
+
+        anime = document.createElement("p");
+        anime.setAttribute("id","anime");
+        anime.textContent= "Anime";
+        insertp.append(anime);
+        insertp.style.display = "flex";
+
+        disney = document.createElement("p");
+        disney.setAttribute("id","disney");
+        disney.textContent= "Disney";
+        insertp.append(disney);
+        insertp.style.display = "flex";
+        
+        divOut = document.getElementById("divDeroul")
+
+
+        
+    }
+
+
+})
+
+
+if(divOut != null){
+
+    divOut.addEventListener("mouseout",()=>{
+
+    insertp = document.getElementById("deroul");
+    insertp.remove();
+
+})
+
+}
+
+
+
+
+
+#theme{
+    color:red;
+    height: 50px;
+    width: 80%;
+    border-style: solid;
+    margin : auto auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* #pokemon{
+    text-align: center;
+    width: 50%;
+} */
+
+/* #anime{
+    position: relative;
+    top: 25px;
+} */
+
+.menuTheme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-style: solid; */
+    width: 100px;
+    /* height: 20px; */
+    /* margin: -15px auto auto auto; */
+    background-color: blue;
+}
+
+#deroul{
+    margin: -18px auto auto auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

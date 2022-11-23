@@ -1,0 +1,21 @@
+#theme{
+    width: 80%;
+    height: 30px;
+    border-style: solid;
+    margin : auto auto auto auto;
+}
+
+#inject {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 10%;
+    margin : 6px auto auto auto;
+}
+
+#inject p {
+    width: 80px;
+    /* height: 25px; */
+    text-align: center;
+}
