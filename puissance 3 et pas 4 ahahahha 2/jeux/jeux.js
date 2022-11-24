@@ -227,7 +227,7 @@ memory.addEventListener("click",(e)=>{
         let visible = document.getElementById(`${bIdNombre}`);
         visible.style.visibility = "visible";
 
-        setTimeout(checkCard,1000);
+        setTimeout(checkCard,500);
 
 
         memoClick = 0;
