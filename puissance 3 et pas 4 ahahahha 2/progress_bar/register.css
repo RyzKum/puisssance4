@@ -1,0 +1,29 @@
+.progress {
+    margin-top: 1%  ;
+    height: .4rem;
+    width: 20%;
+    background-color: #f5f5f5;
+    border-radius: .4rem;
+}
+
+.barre{
+    width: 0%;
+    height: 100%;
+    background-color: unset;
+    border-radius: inherit;
+    transition: .4s ease-in-out;
+}
+
+input#password {
+    color: white;
+    margin-top: 10px;
+    background-color: rgba(40, 45, 79, 0.757);
+    border: none;
+    width: 280px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.password-checker {
+    transition: .4s ease-in-out;
+}
