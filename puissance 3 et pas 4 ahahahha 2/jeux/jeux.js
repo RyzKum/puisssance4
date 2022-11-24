@@ -199,42 +199,46 @@ memory.addEventListener("click",(e)=>{
 
     console.log(e);
 
-    // memoClick++;
+    memoClick++;
 
 
 
-    // if(memoClick == 1){
-    //     a = e.srcElement.currentSrc;
-    //     aId = e.target.id;
-    //     console.log(a);
+    if(memoClick == 1){
+        a = e.srcElement.firstChild.currentSrc;
+        // a = e.srcElement.currentSrc;
+        aId = e.target.children[0].id;
+        aIdNombre = parseInt(aId);
+        console.log(aId);
+        console.log(a);
         
-    // }
+    }
 
 
-    // if(memoClick == 2){
-    //     b = e.srcElement.currentSrc;
-    //     bId = e.target.id;
-    //     console.log(a);
-    //     if(a == b){
+    if(memoClick == 2){
+        b = e.srcElement.firstChild.currentSrc;
+        // b = e.srcElement.currentSrc;
+        bId = e.target.children[0].id;
+        bIdNombre = parseInt(bId);
+        if(a == b){
 
-    //         let stya = document.getElementById(`${aId}`);
-    //         let styb = document.getElementById(`${bId}`);
+            let stya = document.getElementById(`${aIdNombre}`);
+            let styb = document.getElementById(`${bIdNombre}`);
 
             
 
-    //         stya.style.visibility = "visible";
-    //         styb.style.visibility = "visible";
-    //         console.log(stya);
-    //         console.log(styb);
-    //         // injecter le style si vrai
+            stya.style.visibility = "visible";
+            styb.style.visibility = "visible";
+            console.log(stya);
+            console.log(styb);
+            // injecter le style si vrai
 
-    //         console.log("meme image");
-    //     }else{
-    //         // injecter si style faux
-    //         console.log("image différend")
-    //     }
-    //     memoClick = 0;
-    // }
+            console.log("meme image");
+        }else{
+            // injecter si style faux
+            console.log("image différend")
+        }
+        memoClick = 0;
+    }
 
 
 })
