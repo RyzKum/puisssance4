@@ -2,6 +2,8 @@
 let selectTheme = document.getElementById("inject");
 let contain = document.getElementById("remove");
 
+outSelect = document.getElementById("removeLvL");
+
 // C'est pour le gros theme
 
 selectTheme.addEventListener("mouseenter",()=>{
@@ -39,15 +41,15 @@ selectTheme.addEventListener("mouseenter",()=>{
 
 
 
-// selectTheme.addEventListener("mouseleave",()=>{
+outSelect.addEventListener("mouseleave",()=>{
 
 
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     contain.style.height = "auto";
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    contain.style.height = "auto";
 
-// })
+})
 
 
 // Defilement level
@@ -89,16 +91,14 @@ selectLevel.addEventListener("mouseenter",()=>{
 })
 
 
+contain.addEventListener("mouseleave",()=>{
 
 
-// selectLevel.addEventListener("mouseleave",()=>{
-
-
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     selectLevel.style.height = "auto";
-// })
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    selectLevel.style.height = "auto";
+})
 
 const memory = document.getElementById("memory");
 const buttonFacile = document.querySelector('#injectLvl');
