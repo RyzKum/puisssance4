@@ -193,17 +193,26 @@
             </div>
         </div>
 
-        <div id="hautDuTriangle">
-        <input id="ecriture" type="text" placeholder="message">
-    </div>
-    <div id="triangleChat"></div>
-    <p id="pChat"><img id="iconeChat"src="asset/iconeChat.webp" alt=""></p>
+
     </section>
     <?php
     require "../view/footer.inc.php";
     ?>
 
-    <script src="index.js"></script>
+    <div class="chat">
+        <input type="checkbox" id="chatControl">
+        <label class="chatButton" for="chatControl">
+            <div class="chatWindow">
+                <div class="chatWindow2">
+                    <img src="asset/icon.jpg" class="chatIcon">
+                    <img src="asset/end2.png" class="avatar">
+                    <p class="textMessage">Bonjour, t'es trop naze ! </p>
+                    <p class="yourTextMessage">Déjà je vais te tuer et puis manger et es proches ainsi que tes descendants </p>
+                </div>
+                <textarea class="typingWindow"></textarea>
+            </div>
+        </label>
+    </div>
 
 
 </body>
