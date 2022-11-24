@@ -208,6 +208,11 @@ memory.addEventListener("click",(e)=>{
         // a = e.srcElement.currentSrc;
         aId = e.target.children[0].id;
         aIdNombre = parseInt(aId);
+
+        let visible = document.getElementById(`${aIdNombre}`);
+        visible.style.visibility = "visible";
+
+        
         console.log(aId);
         console.log(a);
         
@@ -219,25 +224,40 @@ memory.addEventListener("click",(e)=>{
         // b = e.srcElement.currentSrc;
         bId = e.target.children[0].id;
         bIdNombre = parseInt(bId);
+        let visible = document.getElementById(`${bIdNombre}`);
+        visible.style.visibility = "visible";
+
+        setTimeout(checkCard,1000);
+
+
+        memoClick = 0;
+    }
+
+    function checkCard (){
+
+        console.log("test");
         if(a == b){
 
             let stya = document.getElementById(`${aIdNombre}`);
             let styb = document.getElementById(`${bIdNombre}`);
-
-            
-
             stya.style.visibility = "visible";
             styb.style.visibility = "visible";
-            console.log(stya);
-            console.log(styb);
+            // console.log(stya);
+            // console.log(styb);
             // injecter le style si vrai
 
             console.log("meme image");
         }else{
             // injecter si style faux
+
+            let stya = document.getElementById(`${aIdNombre}`);
+            let styb = document.getElementById(`${bIdNombre}`);
+            stya.style.visibility = "hidden";
+            styb.style.visibility = "hidden";
+
             console.log("image différend")
         }
-        memoClick = 0;
+
     }
 
 
