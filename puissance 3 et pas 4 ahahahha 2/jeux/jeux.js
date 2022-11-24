@@ -2,7 +2,6 @@
 let selectTheme = document.getElementById("inject");
 let contain = document.getElementById("remove");
 
-
 // C'est pour le gros theme
 
 selectTheme.addEventListener("mouseenter",()=>{
@@ -104,7 +103,53 @@ selectLevel.addEventListener("mouseleave",()=>{
 const memory = document.getElementById("memory");
 const buttonFacile = document.querySelector('#injectLvl');
 
+let ran =  0;
+
+function aleatoire (){
+
+    random32 = Math.random()*100;
+    randomEntier = Math.round(random32);
+
+    if(randomEntier >32){
+        aleatoire(); 
+    }else{
+
+        ran = randomEntier;
+    }
+
+}
+
+function randomize(tab) {
+    var i, j, tmp;
+    for (i = tab.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        tmp = tab[i];
+        tab[i] = tab[j];
+        tab[j] = tmp;
+    }
+    return tab;
+}
+
 buttonFacile.addEventListener('click',()=> {
+
+    let tab = [];
+
+    for(i=0 ; i<8 ; i++){
+
+        aleatoire();
+
+        if(tab.indexOf(ran) == -1){
+
+            tab.push(ran);
+            tab.push(ran);
+        }else{
+            i--
+        }
+
+    }
+    
+    rantab = randomize(tab);
+    console.log(rantab);
 
 
     for(i = 0;i < 4;i++){
@@ -119,9 +164,23 @@ buttonFacile.addEventListener('click',()=> {
             let flex = document.createElement("div");
             flex.setAttribute("class",'card');
             create.append(flex);
+
+            let image = document.createElement("img");
+            image.setAttribute("class","carte");
+            // image.src = `${ran}.jpg`;
+            flex.append(image);
+
         }
-        // console.log("mdr")
+
     }
+
+    for(i=0 ; i <tab.length ; i++){
+
+        let imageMemo = document.getElementsByClassName("carte")[i];
+        console.log(imageMemo);
+        imageMemo.src = `asset/disney/${tab[i]}.jpg`;
+    }
+
 });
 
 
