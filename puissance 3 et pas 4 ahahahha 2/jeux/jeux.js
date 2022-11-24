@@ -242,8 +242,7 @@ memory.addEventListener("click",(e)=>{
             let styb = document.getElementById(`${bIdNombre}`);
             stya.style.visibility = "visible";
             styb.style.visibility = "visible";
-            // console.log(stya);
-            // console.log(styb);
+
             // injecter le style si vrai
 
             console.log("meme image");

@@ -68,7 +68,6 @@
 #memory{
     width: 600px;
     height: 600px;
-    border-style: solid;
     display: flex;
     align-items: center;
     flex-direction: column;
