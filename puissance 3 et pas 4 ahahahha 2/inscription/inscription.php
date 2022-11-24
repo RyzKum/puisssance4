@@ -106,7 +106,7 @@ require "../view/header.inc.php";
             <input class="mail" type="email" placeholder="Email" name= "email"maxlength="30">
             <input class="pseudo" type="text" placeholder="Pseudo" name="pseudo"maxlength="30">
             <?php
-             require "/Applications/MAMP/htdocs/puisssance4/puissance 3 et pas 4 ahahahha 2/inscription/register.php";
+             require "../inscription/register.php";
              ?>
             <input class="mdp" type="password" placeholder="Confirmer le mot de passe" name = "conf-mdp">
             <input class="bouton2" type="submit" value="Inscription" name="submit">
