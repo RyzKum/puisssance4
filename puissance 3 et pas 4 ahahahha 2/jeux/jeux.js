@@ -39,15 +39,15 @@ selectTheme.addEventListener("mouseenter",()=>{
 
 
 
-selectTheme.addEventListener("mouseleave",()=>{
+// selectTheme.addEventListener("mouseleave",()=>{
 
 
-    document.getElementsByClassName("injectStyle")[0].remove();
-    document.getElementsByClassName("injectStyle")[0].remove();
-    document.getElementsByClassName("injectStyle")[0].remove();
-    contain.style.height = "auto";
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     contain.style.height = "auto";
 
-})
+// })
 
 
 // Defilement level
@@ -91,14 +91,14 @@ selectLevel.addEventListener("mouseenter",()=>{
 
 
 
-selectLevel.addEventListener("mouseleave",()=>{
+// selectLevel.addEventListener("mouseleave",()=>{
 
 
-    document.getElementsByClassName("injectStyle")[0].remove();
-    document.getElementsByClassName("injectStyle")[0].remove();
-    document.getElementsByClassName("injectStyle")[0].remove();
-    selectLevel.style.height = "auto";
-})
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     document.getElementsByClassName("injectStyle")[0].remove();
+//     selectLevel.style.height = "auto";
+// })
 
 const memory = document.getElementById("memory");
 const buttonFacile = document.querySelector('#injectLvl');
@@ -110,7 +110,7 @@ function aleatoire (){
     random32 = Math.random()*100;
     randomEntier = Math.round(random32);
 
-    if(randomEntier >32){
+    if(randomEntier >31){
         aleatoire(); 
     }else{
 
@@ -151,37 +151,78 @@ buttonFacile.addEventListener('click',()=> {
     rantab = randomize(tab);
     console.log(rantab);
 
+    if(document.getElementsByClassName("carte")[0] == undefined){
 
-    for(i = 0;i < 4;i++){
-        
+        for(i = 0;i < 4;i++){
+            
         let create = document.createElement("div");
         create.setAttribute("class","flexCard");
         memory.append(create);
 
 
         for(a = 0;a < 4;a++){
-
+            
             let flex = document.createElement("div");
             flex.setAttribute("class",'card');
             create.append(flex);
 
             let image = document.createElement("img");
             image.setAttribute("class","carte");
-            // image.src = `${ran}.jpg`;
             flex.append(image);
 
         }
-
+        
     }
-
+    
+}
     for(i=0 ; i <tab.length ; i++){
 
         let imageMemo = document.getElementsByClassName("carte")[i];
-        console.log(imageMemo);
+        imageMemo.setAttribute("id",`${i}`);
         imageMemo.src = `asset/disney/${tab[i]}.jpg`;
     }
 
 });
 
 
+
+
+let memoClick = 0;
+
+let a; 
+let aId;
+let b;
+let bId;
+
+memory.addEventListener("click",(e)=>{
+
+    memoClick++;
+
+
+
+    if(memoClick == 1){
+        a = e.srcElement.currentSrc;
+        aId = e.target.id;
+        console.log(a);
+        
+    }
+
+
+    if(memoClick == 2){
+        b = e.srcElement.currentSrc;
+        bId = e.target.id;
+        console.log(a);
+        if(a == b){
+            // injecter le style si vrai
+
+            console.log("meme image");
+        }else{
+            // injecter si style faux
+            console.log("image différend")
+        }
+        memoClick = 0;
+    }
+
+
+})
 
