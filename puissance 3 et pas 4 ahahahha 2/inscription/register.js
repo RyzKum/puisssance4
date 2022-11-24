@@ -16,11 +16,8 @@ function checkPasswordStrength(password) {
 
     if (password.match(/(?=.*[A-Z])/ && /(?=.*[0-9])/ && /(?=.{8})/ && /(?=.*[!@#$%&])/)) strength++; //Mot de passe fort : Plus de 8 caractères, au moins une majuscule, un chiffre et un caractère spécial 
 
-    // if (password.match(/(?=.*[!@#$%&])/)) strength++; // Si Contient une majusucle
-
-    // if (password.match(/(?=.{8})/)) strength++; // Si Contient une majusucle
-
     console.log(strength);
+
 
     switch(strength){
         case 0:
@@ -29,12 +26,55 @@ function checkPasswordStrength(password) {
             break;
         case 1:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: red;`;
+
+            check = document.getElementById("prout1");
+
+            if(check == undefined){
+
+                let recep = document.getElementById("forceMdp");
+                let weak = document.createElement("p");
+                weak.textContent = "Weak";
+                weak.setAttribute("id","prout1");
+                recep.append(weak);
+
+            }
+
             break;
         case 2:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: yellow;`;
+
+            check = document.getElementById("prout2");
+
+            if(check == undefined){
+
+                let recep = document.getElementById("forceMdp");
+                let remove = document.getElementById("prout1");
+                let medium = document.createElement("p");
+                medium.textContent = "Medium";
+                medium.setAttribute("id","prout2");
+                recep.append(medium);
+                remove.remove();
+
+            }
+
             break;
         case 3:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: green;`;
-            break;
+           
+            check = document.getElementById("prout3");
+           
+            if(check == undefined){
+
+                let recep = document.getElementById("forceMdp");
+                let remove = document.getElementById("prout2");
+                let strong = document.createElement("p");
+                strong.textContent = "Strong";
+                strong.setAttribute("id","prout3");
+                recep.append(strong);
+                remove.remove();
+
+            }
+
+            break; 
     }
 }

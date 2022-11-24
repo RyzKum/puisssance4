@@ -27,3 +27,7 @@ input#password {
 .password-checker {
     transition: .4s ease-in-out;
 }
+
+#password{
+    color: black;
+}
