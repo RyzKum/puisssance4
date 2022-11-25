@@ -88,6 +88,11 @@
 }
 
 #divPlay {
-    margin: auto auto auto auto;
-    color: yellow;
+    margin: 20px auto 30px auto;
+    width: 10%;
+    color: white;
+    font-size: 24px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
 }

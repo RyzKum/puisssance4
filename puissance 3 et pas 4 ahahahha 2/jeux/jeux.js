@@ -47,7 +47,9 @@ outSelect.addEventListener("mouseleave",()=>{
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
-    contain.style.height = "auto";
+    contain.style.height = "30px";
+    let containLevel = document.getElementById("jeuxGlobal");
+    containLevel.style.height = "30px";
 
 })
 
@@ -55,7 +57,7 @@ outSelect.addEventListener("mouseleave",()=>{
 // Defilement level
 
 let selectLevel = document.getElementById("injectLvl");
-// let containLevel = document.getElementById("jeuxGlobal");
+
 
 
 selectLevel.addEventListener("mouseenter",()=>{
@@ -97,7 +99,8 @@ contain.addEventListener("mouseleave",()=>{
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
-    selectLevel.style.height = "auto";
+    contain.style.height = "40px";
+    
 })
 
 const memory = document.getElementById("memory");
@@ -185,6 +188,7 @@ buttonFacile.addEventListener('click',()=> {
 });
 
 
+// Debut memo si afficher 
 
 
 let memoClick = 0;
