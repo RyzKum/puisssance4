@@ -65,7 +65,6 @@
 
 #memory{
     width: 600px;
-    height: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -102,4 +101,8 @@
 
 #pTheme{
     z-index: 1;
+}
+
+#memoryPlace{
+    height: 600px;
 }

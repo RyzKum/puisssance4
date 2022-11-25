@@ -132,7 +132,7 @@ function randomize(tab) {
     return tab;
 }
 
-const memory = document.getElementById("memory");
+const memory = document.getElementById("memoryPlace");
 const buttonFacile = document.querySelector('#injectLvl');
 
 
@@ -147,7 +147,22 @@ buttonFacile.addEventListener('click',(e)=> {
     let w;
     let u;
 
-    // let removeAll = 
+    // let removeAll = document.getElementsByClassName("Card").length;
+    // console.log(removeAll);
+
+    
+    // for(i = 0 ; i<removeAll-1 ; i++){
+
+    // document.getElementsByClassName("flexCard")[i].remove();
+
+    // }
+
+    let PlayMemo = document.createElement("div");
+    PlayMemo.setAttribute("id","memory");
+    memory.append(PlayMemo);
+
+
+
 
     if(changeLvl == "Facile"){
 
@@ -211,13 +226,14 @@ buttonFacile.addEventListener('click',(e)=> {
         
     }
     
-}
+    }
     for(i=0 ; i <tab.length ; i++){
 
         let imageMemo = document.getElementsByClassName("carte")[i];
         imageMemo.setAttribute("id",`${i}`);
         imageMemo.src = `asset/disney/${tab[i]}.jpg`;
     }
+
 
 });
 
