@@ -41,17 +41,17 @@ selectTheme.addEventListener("mouseenter",()=>{
 
 
 
-// outSelect.addEventListener("mouseleave",()=>{
+outSelect.addEventListener("mouseleave",()=>{
 
 
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     document.getElementsByClassName("injectStyle")[0].remove();
-//     contain.style.height = "30px";
-//     let containLevel = document.getElementById("jeuxGlobal");
-//     containLevel.style.height = "100px";
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    document.getElementsByClassName("injectStyle")[0].remove();
+    contain.style.height = "30px";
+    let containLevel = document.getElementById("jeuxGlobal");
+    containLevel.style.height = "100px";
 
-// })
+})
 
 
 // Defilement level
