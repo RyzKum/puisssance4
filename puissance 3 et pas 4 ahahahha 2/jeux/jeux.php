@@ -39,11 +39,15 @@
 
     <div id="removeScore">
         <div id="injectScore">
-            <p id="pThemeScore">Score</p>
+            <p id="pThemeScore">Temps</p>
         </div>
     </div>
 
 
+</div>
+
+<div id="divPlay">
+    <p id="pPlay">Play</p>
 </div>
 
 <div id="memory"></div>

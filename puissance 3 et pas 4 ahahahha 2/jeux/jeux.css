@@ -86,3 +86,8 @@
     width: 100%;
     visibility: hidden;
 }
+
+#divPlay {
+    margin: auto auto auto auto;
+    color: yellow;
+}
