@@ -52,7 +52,9 @@
 </div>
 
 <div id="divPlay">
+    <p id="recupLevel"></p>
     <p id="pPlay">Play</p>
+    <p id="recupTheme"></p>
 </div>
 
 <div id="memory"></div>

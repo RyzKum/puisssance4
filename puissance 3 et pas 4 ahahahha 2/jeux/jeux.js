@@ -103,8 +103,7 @@ contain.addEventListener("mouseleave",()=>{
     
 })
 
-const memory = document.getElementById("memory");
-const buttonFacile = document.querySelector('#injectLvl');
+
 
 let ran =  0;
 
@@ -133,11 +132,46 @@ function randomize(tab) {
     return tab;
 }
 
-buttonFacile.addEventListener('click',()=> {
+const memory = document.getElementById("memory");
+const buttonFacile = document.querySelector('#injectLvl');
+
+
+
+buttonFacile.addEventListener('click',(e)=> {
+
+    // console.log(e.target.innerHTML);
+
+    let changeLvl = e.target.innerHTML;
+    // console.log(changeLvl);
+
+    let w;
+    let u;
+
+    // let removeAll = 
+
+    if(changeLvl == "Facile"){
+
+        w = 8;
+        u = 4;
+        
+    }
+
+    if(changeLvl == "Normal"){
+
+        w = 16;
+        u = 6;
+    }
+
+    if(changeLvl == "Difficile"){
+
+        w=32;
+        u=8;
+    }
+
 
     let tab = [];
 
-    for(i=0 ; i<8 ; i++){
+    for(i=0 ; i<w ; i++){
 
         aleatoire();
 
@@ -156,14 +190,14 @@ buttonFacile.addEventListener('click',()=> {
 
     if(document.getElementsByClassName("carte")[0] == undefined){
 
-        for(i = 0;i < 4;i++){
+        for(i = 0;i < u;i++){
             
         let create = document.createElement("div");
         create.setAttribute("class","flexCard");
         memory.append(create);
 
 
-        for(a = 0;a < 4;a++){
+        for(a = 0;a < u;a++){
             
             let flex = document.createElement("div");
             flex.setAttribute("class",'card');
@@ -200,12 +234,7 @@ let bId;
 
 memory.addEventListener("click",(e)=>{
 
-
-    console.log(e);
-
     memoClick++;
-
-
 
     if(memoClick == 1){
         a = e.srcElement.firstChild.currentSrc;

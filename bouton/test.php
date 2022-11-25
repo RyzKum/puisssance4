@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../bouton/bouton.css">
+    <link rel="stylesheet" href="../bouton/bouton.css">
     <title>Document</title>
 </head>
 <body>
-    <a class="button" href="../login/login.php">
+    <a href="../login/login.php">
         Jouer !
     </a>
 </body>
