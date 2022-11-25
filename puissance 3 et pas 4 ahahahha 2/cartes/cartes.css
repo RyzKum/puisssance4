@@ -1,0 +1,169 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.game {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game:hover .containerSquare {
+    transform: rotateY(180deg);
+}
+
+.ALL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+
+}
+
+.containerSquare {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.innerSquare {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: blue;
+    transition-duration: 1s;
+}
+
+.outerSquare {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    background: red;
+    backface-visibility: hidden;
+    transform: rotateY(180deg) rotateZ(50deg);
+    transition-duration: 1s;
+}
+
+.containerGame {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.containerSquare2 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.innerSquare2 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: blue;
+    transition-duration: 1s;
+}
+
+.outerSquare2 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    background: red;
+    backface-visibility: hidden;
+    transform: rotateY(180deg) rotateZ(50deg);
+    transition-duration: 1s;
+}
+
+.containerSquare3 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.innerSquare3 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: blue;
+    transition-duration: 1s;
+}
+
+.outerSquare3 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    background: red;
+    backface-visibility: hidden;
+    transform: rotateY(180deg) rotateZ(50deg);
+    transition-duration: 1s;
+}
+
+.containerSquare4 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.innerSquare4 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: blue;
+    transition-duration: 1s;
+}
+
+.outerSquare4 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    position: absolute;
+    background: red;
+    backface-visibility: hidden;
+    transform: rotateY(180deg) rotateZ(50deg);
+    transition-duration: 1s;
+}
