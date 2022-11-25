@@ -29,7 +29,7 @@
                 </div>
 
                 <div id="power">
-                    <p>Power Of Memory</p>
+                    <p>Power Of Memory </p>
                     <p><span class="pointOrange">▪</span> Jouer !</p>
                     <p><span class="pointOrange">▪</span> Les scores</p>
                     <p><span class="pointOrange">▪</span> Nous contacter</p>
