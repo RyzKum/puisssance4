@@ -6,13 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Start
+    <a href="../login/login.php">
+        Jouer !
     </a>
-
 </body>
 </html>
