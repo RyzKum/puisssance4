@@ -74,9 +74,9 @@
 
             <input class="mail" type="email" placeholder="Email" maxlength="30" name="email">
             <input class="mdp" type="password" placeholder="Mot de passe" name="mot-de-passe">
-            <input class="bouton2" type="submit" name="submit" value="Connexion">
+            <input class="bouton2" type="submit" name="submit" value="Connexion"  href="../accueil/accueil.php">
         </form>
-
+       
     </section>
 
     <section class="ses5">
