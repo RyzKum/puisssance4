@@ -47,7 +47,9 @@ outSelect.addEventListener("mouseleave",()=>{
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
-    contain.style.height = "auto";
+    contain.style.height = "30px";
+    let containLevel = document.getElementById("jeuxGlobal");
+    containLevel.style.height = "100px";
 
 })
 
@@ -55,7 +57,7 @@ outSelect.addEventListener("mouseleave",()=>{
 // Defilement level
 
 let selectLevel = document.getElementById("injectLvl");
-// let containLevel = document.getElementById("jeuxGlobal");
+
 
 
 selectLevel.addEventListener("mouseenter",()=>{
@@ -97,7 +99,8 @@ contain.addEventListener("mouseleave",()=>{
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
-    selectLevel.style.height = "auto";
+    contain.style.height = "40px";
+    
 })
 
 const memory = document.getElementById("memory");
@@ -185,6 +188,7 @@ buttonFacile.addEventListener('click',()=> {
 });
 
 
+// Debut memo si afficher 
 
 
 let memoClick = 0;
@@ -242,7 +246,7 @@ memory.addEventListener("click",(e)=>{
             let styb = document.getElementById(`${bIdNombre}`);
             stya.style.visibility = "visible";
             styb.style.visibility = "visible";
-
+            
             // injecter le style si vrai
 
             console.log("meme image");
@@ -262,3 +266,49 @@ memory.addEventListener("click",(e)=>{
 
 })
 
+
+var startTime = 0
+var start = 0
+var end = 0
+var diff = 0
+var timerID = 0
+function chrono(){
+	end = new Date()
+	diff = end - start
+	diff = new Date(diff)
+	var msec = diff.getMilliseconds()
+	var sec = diff.getSeconds()
+	var min = diff.getMinutes()
+	if (min < 10){
+		min = "0" + min
+	}
+	if (sec < 10){
+		sec = "0" + sec
+	}
+	if(msec < 10){
+		msec = "00" +msec
+	}
+	else if(msec < 100){
+		msec = "0" +msec
+	}
+	document.getElementById("chronotime").innerHTML = min + ":" + sec + ":" + msec
+	timerID = setTimeout("chrono()", 10)
+}
+function chronoStart(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	start = new Date()
+	chrono()
+}
+function chronoContinue(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	start = new Date()-diff
+	start = new Date(start)
+	chrono()
+}
+function chronoStop(){
+	document.chronoForm.startstop.value = "start!"
+	document.chronoForm.startstop.onclick = chronoContinue
+	clearTimeout(timerID)
+}

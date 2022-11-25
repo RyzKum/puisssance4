@@ -421,6 +421,9 @@ input {
     opacity: 50%;
 }
 
-.headerBtn:hover {
+.headerBtn:hover{
     color: orange;
-}
+    border-top: 2px solid orange; /* Ajoute un bord en haut */
+    padding-block-start: 6px; /* choisi la distance du bord */
+  }
+  

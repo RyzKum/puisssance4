@@ -14,11 +14,11 @@
     require "../view/header.inc.php";
     ?>
 
-<div id="remove">
+<!-- <div id="remove">
         <div id="inject">
             <p id="pTheme">Themes</p>
         </div>
-    </div>
+    </div> -->
 
 
 <div id="jeuxGlobal">
@@ -30,20 +30,29 @@
         </div>
     </div>
 
-    <div id="removeT">
-        <div id="injectTheme">
-            <p id="pThemeLvL">Theme</p>
+    <div id="remove">
+        <div id="inject">
+            <p id="pTheme">Themes</p>
         </div>
     </div>
 
 
     <div id="removeScore">
         <div id="injectScore">
-            <p id="pThemeScore">Score</p>
+            <p id="pThemeScore">Temps</p>
+            <span id="chronotime">00:00:00</span>
+    <form name="chronoForm">
+        <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+    </form>
+
         </div>
     </div>
 
 
+</div>
+
+<div id="divPlay">
+    <p id="pPlay">Play</p>
 </div>
 
 <div id="memory"></div>

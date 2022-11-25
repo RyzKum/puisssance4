@@ -1,9 +1,9 @@
-#remove{
+/* #remove{
 
-    margin: 50px auto auto auto;
-    width: 20%;
+    font-size: 20px;
 
-} 
+}  */
+
 
 #remove:hover{
     background-color: gray;
@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 
 }
 
@@ -23,16 +24,13 @@
 
 #remove p {
     text-align: center;
-    color: rebeccapurple;
+    color: yellow;
 }
 
-#pTheme{
-    font-size: 25px;
-}
 
-/* .injectStyle{
-    text-align: center;
-} */
+.injectStyle{
+    z-index: 0;
+}
 
 .injectStyle:hover{
 
@@ -85,4 +83,23 @@
     height: 100%;
     width: 100%;
     visibility: hidden;
+}
+
+#divPlay {
+    margin: 40px auto 30px auto;
+    width: 10%;
+    color: white;
+    font-size: 24px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#pPlay{
+    z-index: 2;
+}
+
+#pTheme{
+    z-index: 1;
 }
