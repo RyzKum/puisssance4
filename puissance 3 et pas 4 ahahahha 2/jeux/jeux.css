@@ -1,9 +1,9 @@
-#remove{
+/* #remove{
 
-    margin: 50px auto auto auto;
-    width: 20%;
+    font-size: 20px;
 
-} 
+}  */
+
 
 #remove:hover{
     background-color: gray;
@@ -23,12 +23,9 @@
 
 #remove p {
     text-align: center;
-    color: rebeccapurple;
+    color: yellow;
 }
 
-#pTheme{
-    font-size: 25px;
-}
 
 /* .injectStyle{
     text-align: center;
@@ -88,7 +85,7 @@
 }
 
 #divPlay {
-    margin: 20px auto 30px auto;
+    margin: 40px auto 30px auto;
     width: 10%;
     color: white;
     font-size: 24px;
