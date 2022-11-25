@@ -18,7 +18,8 @@
             <a class="headerBtn" href="../login/login.php">SE CONNECTER</a>
             <a class="headerBtn" href="../contact/contact.php">CONTACTER</a>
             <a class="headerBtn" href="../scores/scores.php">SCORES</a>
-
+            <a class="headerBtn" href="../jeux/jeux.php">JEU</a>
+            <a class="headerBtn" href="../profil/profil.php">PROFIL</a>
         </div>
     </nav>
 

@@ -224,3 +224,8 @@ margin-top: 5%;
   margin: 30px auto auto auto;
   font-size: 20px;
 }
+.headerBtn:hover{
+  color: orange;
+  border-top: 2px solid orange; /* Ajoute un bord en haut */
+  padding-block-start: 6px; /* choisi la distance du bord */
+}
