@@ -40,6 +40,11 @@
     <div id="removeScore">
         <div id="injectScore">
             <p id="pThemeScore">Temps</p>
+            <span id="chronotime">00:00:00</span>
+    <form name="chronoForm">
+        <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+    </form>
+
         </div>
     </div>
 
