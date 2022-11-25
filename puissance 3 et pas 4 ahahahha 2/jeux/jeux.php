@@ -14,11 +14,11 @@
     require "../view/header.inc.php";
     ?>
 
-<div id="remove">
+<!-- <div id="remove">
         <div id="inject">
             <p id="pTheme">Themes</p>
         </div>
-    </div>
+    </div> -->
 
 
 <div id="jeuxGlobal">
@@ -30,9 +30,9 @@
         </div>
     </div>
 
-    <div id="removeT">
-        <div id="injectTheme">
-            <p id="pThemeLvL">Theme</p>
+    <div id="remove">
+        <div id="inject">
+            <p id="pTheme">Themes</p>
         </div>
     </div>
 

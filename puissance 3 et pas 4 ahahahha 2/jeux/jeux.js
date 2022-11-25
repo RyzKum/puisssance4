@@ -99,7 +99,7 @@ contain.addEventListener("mouseleave",()=>{
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
     document.getElementsByClassName("injectStyle")[0].remove();
-    contain.style.height = "40px";
+    contain.style.height = "25px";
     
 })
 
