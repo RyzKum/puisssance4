@@ -119,3 +119,7 @@
     justify-content: space-around;
     width: 50%;
 }
+
+#chrono{
+    visibility: hidden;
+}

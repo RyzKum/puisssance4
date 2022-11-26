@@ -11,8 +11,6 @@ let recupTheme = document.getElementById("recupTheme");
 
 selectTheme.addEventListener("click",(e)=>{
 
-    console.log(e.target.innerText);
-    ;
     recupTheme.textContent = e.target.innerText;
 })
 
@@ -166,6 +164,8 @@ let boutonPlay = document.getElementById("divPlay");
 
 boutonPlay.addEventListener("click",()=>{
 
+    chronoStart();
+
     if(document.getElementsByClassName("flexCard")[0]){
             
         let nbColonneRemove = document.getElementsByClassName("flexCard").length;
@@ -214,13 +214,13 @@ boutonPlay.addEventListener("click",()=>{
     }
     
     rantab = randomize(tab);
-    console.log(rantab);
+
 
 
 
         
         for(i = 0;i < u;i++){
-        console.log(memory);
+
         let create = document.createElement("div");
         create.setAttribute("class","flexCard");
         memoRemove.append(create);
@@ -280,6 +280,39 @@ boutonPlay.addEventListener("click",()=>{
 
 // Debut memo si afficher 
 
+function verifEndGame(){
+
+    
+
+    let compteurCheck = document.getElementsByClassName("card").length;
+
+    let compteurFinal = 0;
+
+    for(i = 0 ;i< compteurCheck; i++){
+
+        // console.log("verif");
+
+        let visi = document.getElementsByClassName("carte")[i];
+        let vivi = visi.style.visibility;
+
+        if(vivi == "visible"){
+
+            compteurFinal++;
+            console.log(compteurFinal);
+
+        }
+        // console.log(vivi);
+
+
+    }
+
+    if(compteurCheck == compteurFinal){
+        return true
+    }
+
+
+}
+
 
 let memoClick = 0;
 
@@ -301,10 +334,6 @@ memoryPlace.addEventListener("click",(e)=>{
         let visible = document.getElementById(`${aIdNombre}`);
         visible.style.visibility = "visible";
 
-        
-        console.log(aId);
-        console.log(a);
-        
     }
 
 
@@ -324,7 +353,6 @@ memoryPlace.addEventListener("click",(e)=>{
 
     function checkCard (){
 
-        console.log("test");
         if(a == b){
 
             let stya = document.getElementById(`${aIdNombre}`);
@@ -334,7 +362,6 @@ memoryPlace.addEventListener("click",(e)=>{
             
             // injecter le style si vrai
 
-            console.log("meme image");
         }else{
             // injecter si style faux
 
@@ -342,8 +369,14 @@ memoryPlace.addEventListener("click",(e)=>{
             let styb = document.getElementById(`${bIdNombre}`);
             stya.style.visibility = "hidden";
             styb.style.visibility = "hidden";
+            
+        }
 
-            console.log("image différend")
+        // verifEndGame();
+        // mettre la verif de la conditon de victoire
+
+        if( verifEndGame() == true){
+            chronoStop()
         }
 
     }
