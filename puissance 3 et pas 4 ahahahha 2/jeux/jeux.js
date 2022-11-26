@@ -6,6 +6,15 @@ outSelect = document.getElementById("removeLvL");
 
 // C'est pour le gros theme
 
+let recupTheme = document.getElementById("recupTheme");
+
+
+selectTheme.addEventListener("click",(e)=>{
+
+    console.log(e.target.innerText);
+    ;
+    recupTheme.textContent = e.target.innerText;
+})
 
 
 selectTheme.addEventListener("mouseenter",()=>{
@@ -138,21 +147,32 @@ function randomize(tab) {
 const memoryPlace = document.getElementById("memoryPlace");
 const memory = document.getElementById(`memory`);
 memoRemove = document.getElementsByClassName("memory")[0];
+let changeLvl;
 
 const buttonFacile = document.querySelector('#injectLvl');
 
 buttonFacile.addEventListener('click',(e)=> {
 
-        if(document.getElementsByClassName("flexCard")[0]){
-            
-            let nbColonneRemove = document.getElementsByClassName("flexCard").length;
-            for(i=0;i<nbColonneRemove;i++ ){
-                document.getElementsByClassName("flexCard")[0].remove();
-            }
-        }
 
-    let changeLvl = e.target.innerHTML;
-    // console.log(changeLvl);
+    changeLvl = e.target.innerHTML;
+    let recupLevel = document.getElementById("recupLevel");
+    recupLevel.textContent = changeLvl;
+
+
+});
+
+let boutonPlay = document.getElementById("divPlay");
+
+
+boutonPlay.addEventListener("click",()=>{
+
+    if(document.getElementsByClassName("flexCard")[0]){
+            
+        let nbColonneRemove = document.getElementsByClassName("flexCard").length;
+        for(i=0;i<nbColonneRemove;i++ ){
+            document.getElementsByClassName("flexCard")[0].remove();
+        }
+    }
 
     let w;
     let u;
@@ -220,17 +240,42 @@ buttonFacile.addEventListener('click',(e)=> {
 
         }
         
-    }
+        }
+
     
-    for(i=0 ; i <tab.length ; i++){
+    if( recupTheme.textContent == "Disney"){
 
-        let imageMemo = document.getElementsByClassName("carte")[i];
-        imageMemo.setAttribute("id",`${i}`);
-        imageMemo.src = `asset/disney/${tab[i]}.jpg`;
+        for(i=0 ; i <tab.length ; i++){
+
+            let imageMemo = document.getElementsByClassName("carte")[i];
+            imageMemo.setAttribute("id",`${i}`);
+            imageMemo.src = `asset/disney/${tab[i]}.jpg`;
+        }
+
     }
 
+    if(recupTheme.textContent == "Anime"){
 
-});
+        for(i=0 ; i <tab.length ; i++){
+
+            let imageMemo = document.getElementsByClassName("carte")[i];
+            imageMemo.setAttribute("id",`${i}`);
+            imageMemo.src = `asset/anime/${tab[i]}.png`;
+        }
+
+    }
+
+    if(recupTheme.textContent == "Pokemon"){
+
+        for(i=0 ; i <tab.length ; i++){
+
+            let imageMemo = document.getElementsByClassName("carte")[i];
+            imageMemo.setAttribute("id",`${i}`);
+            imageMemo.src = `asset/pokemon/${tab[i]}.png`;
+        }
+
+    }
+})
 
 
 // Debut memo si afficher 

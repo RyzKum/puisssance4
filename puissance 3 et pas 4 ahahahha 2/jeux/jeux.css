@@ -113,3 +113,9 @@
     margin : auto auto auto auto;
     visibility: visible;
 }
+
+#divPlay {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
