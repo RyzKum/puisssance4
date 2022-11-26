@@ -6,7 +6,7 @@ outSelect = document.getElementById("removeLvL");
 
 // C'est pour le gros theme
 
-console.log("test");
+
 
 selectTheme.addEventListener("mouseenter",()=>{
 
@@ -134,10 +134,9 @@ function randomize(tab) {
     return tab;
 }
 
-const memory = document.getElementById("memoryPlace");
+const memoryPlace = document.getElementById("memoryPlace");
+
 const buttonFacile = document.querySelector('#injectLvl');
-
-
 
 buttonFacile.addEventListener('click',(e)=> {
 
@@ -161,82 +160,86 @@ buttonFacile.addEventListener('click',(e)=> {
 
     let PlayMemo = document.createElement("div");
     PlayMemo.setAttribute("id","memory");
-    memory.append(PlayMemo);
+    const memory = document.getElementById("memory");
 
+    memoryPlace.append(PlayMemo);
 
-
-
-    if(changeLvl == "Facile"){
-
-        w = 8;
-        u = 4;
-        
-    }
-
-    if(changeLvl == "Normal"){
-
-        w = 18;
-        u = 6;
-    }
-
-    if(changeLvl == "Difficile"){
-
-        w=32;
-        u=8;
-    }
-
-
-    let tab = [];
-
-    for(i=0 ; i<w ; i++){
-
-        aleatoire();
-
-        if(tab.indexOf(ran) == -1){
-
-            tab.push(ran);
-            tab.push(ran);
-        }else{
-            i--
-        }
-
-    }
     
-    rantab = randomize(tab);
-    console.log(rantab);
-
-    if(document.getElementsByClassName("carte")[0] == undefined){
-
-        for(i = 0;i < u;i++){
-            
-        let create = document.createElement("div");
-        create.setAttribute("class","flexCard");
-        memory.append(create);
-
-        // ici
 
 
-        for(a = 0;a < u;a++){
-            
-            let flex = document.createElement("div");
-            flex.setAttribute("class",'card');
-            create.append(flex);
 
-            let image = document.createElement("img");
-            image.setAttribute("class","carte");
-            flex.append(image);
 
-        }
+    // if(changeLvl == "Facile"){
+
+    //     w = 8;
+    //     u = 4;
         
-    }
-    
-    }
-    for(i=0 ; i <tab.length ; i++){
+    // }
 
-        let imageMemo = document.getElementsByClassName("carte")[i];
-        imageMemo.setAttribute("id",`${i}`);
-        imageMemo.src = `asset/disney/${tab[i]}.jpg`;
-    }
+    // if(changeLvl == "Normal"){
+
+    //     w = 18;
+    //     u = 6;
+    // }
+
+    // if(changeLvl == "Difficile"){
+
+    //     w=32;
+    //     u=8;
+    // }
+
+
+    // let tab = [];
+
+    // for(i=0 ; i<w ; i++){
+
+    //     aleatoire();
+
+    //     if(tab.indexOf(ran) == -1){
+
+    //         tab.push(ran);
+    //         tab.push(ran);
+    //     }else{
+    //         i--
+    //     }
+
+    // }
+    
+    // rantab = randomize(tab);
+    // console.log(rantab);
+
+    // if(document.getElementsByClassName("carte")[0] == undefined){
+
+    //     for(i = 0;i < u;i++){
+            
+    //     let create = document.createElement("div");
+    //     create.setAttribute("class","flexCard");
+    //     memory.append(create);
+
+    //     // ici
+
+
+    //     for(a = 0;a < u;a++){
+            
+    //         let flex = document.createElement("div");
+    //         flex.setAttribute("class",'card');
+    //         create.append(flex);
+
+    //         let image = document.createElement("img");
+    //         image.setAttribute("class","carte");
+    //         flex.append(image);
+
+    //     }
+        
+    // }
+    
+    // }
+    // for(i=0 ; i <tab.length ; i++){
+
+    //     let imageMemo = document.getElementsByClassName("carte")[i];
+    //     imageMemo.setAttribute("id",`${i}`);
+    //     imageMemo.src = `asset/disney/${tab[i]}.jpg`;
+    // }
 
 
 });
