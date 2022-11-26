@@ -6,6 +6,8 @@ outSelect = document.getElementById("removeLvL");
 
 // C'est pour le gros theme
 
+console.log("test");
+
 selectTheme.addEventListener("mouseenter",()=>{
 
     disney = document.createElement("p");
