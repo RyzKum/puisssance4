@@ -135,6 +135,7 @@ function randomize(tab) {
 }
 
 const memoryPlace = document.getElementById("memoryPlace");
+const memory = document.getElementsByClassName("memory")[0];
 
 const buttonFacile = document.querySelector('#injectLvl');
 
@@ -148,98 +149,89 @@ buttonFacile.addEventListener('click',(e)=> {
     let w;
     let u;
 
-    // let removeAll = document.getElementsByClassName("Card").length;
-    // console.log(removeAll);
-
-    
-    // for(i = 0 ; i<removeAll-1 ; i++){
-
-    // document.getElementsByClassName("flexCard")[i].remove();
-
-    // }
+    memory.remove();
 
     let PlayMemo = document.createElement("div");
-    PlayMemo.setAttribute("id","memory");
-    const memory = document.getElementById("memory");
+    PlayMemo.setAttribute("class","memory");
+    
 
     memoryPlace.append(PlayMemo);
 
-    
+    memoRemove = document.getElementsByClassName("memory")[0];
 
 
+    if(changeLvl == "Facile"){
 
-
-    // if(changeLvl == "Facile"){
-
-    //     w = 8;
-    //     u = 4;
+        w = 8;
+        u = 4;
         
-    // }
+    }
 
-    // if(changeLvl == "Normal"){
+    if(changeLvl == "Normal"){
 
-    //     w = 18;
-    //     u = 6;
-    // }
+        w = 18;
+        u = 6;
+    }
 
-    // if(changeLvl == "Difficile"){
+    if(changeLvl == "Difficile"){
 
-    //     w=32;
-    //     u=8;
-    // }
+        w=32;
+        u=8;
+    }
 
 
-    // let tab = [];
+    let tab = [];
 
-    // for(i=0 ; i<w ; i++){
+    for(i=0 ; i<w ; i++){
 
-    //     aleatoire();
+        aleatoire();
 
-    //     if(tab.indexOf(ran) == -1){
+        if(tab.indexOf(ran) == -1){
 
-    //         tab.push(ran);
-    //         tab.push(ran);
-    //     }else{
-    //         i--
-    //     }
+            tab.push(ran);
+            tab.push(ran);
+        }else{
+            i--
+        }
 
-    // }
+    }
     
-    // rantab = randomize(tab);
-    // console.log(rantab);
+    rantab = randomize(tab);
+    console.log(rantab);
 
-    // if(document.getElementsByClassName("carte")[0] == undefined){
+    if(document.getElementsByClassName("carte")[0] == undefined){
 
-    //     for(i = 0;i < u;i++){
-            
-    //     let create = document.createElement("div");
-    //     create.setAttribute("class","flexCard");
-    //     memory.append(create);
-
-    //     // ici
-
-
-    //     for(a = 0;a < u;a++){
-            
-    //         let flex = document.createElement("div");
-    //         flex.setAttribute("class",'card');
-    //         create.append(flex);
-
-    //         let image = document.createElement("img");
-    //         image.setAttribute("class","carte");
-    //         flex.append(image);
-
-    //     }
         
-    // }
-    
-    // }
-    // for(i=0 ; i <tab.length ; i++){
+        for(i = 0;i < u;i++){
+        console.log(memory);
+        let create = document.createElement("div");
+        create.setAttribute("class","flexCard");
+        memoRemove.append(create);
 
-    //     let imageMemo = document.getElementsByClassName("carte")[i];
-    //     imageMemo.setAttribute("id",`${i}`);
-    //     imageMemo.src = `asset/disney/${tab[i]}.jpg`;
-    // }
+        // ici
+
+
+        for(a = 0;a < u;a++){
+            
+            let flex = document.createElement("div");
+            flex.setAttribute("class",'card');
+            create.append(flex);
+
+            let image = document.createElement("img");
+            image.setAttribute("class","carte");
+            flex.append(image);
+
+        }
+        
+    }
+    
+    }
+    for(i=0 ; i <tab.length ; i++){
+
+        let imageMemo = document.getElementsByClassName("carte")[i];
+        imageMemo.setAttribute("id",`${i}`);
+        imageMemo.src = `asset/disney/${tab[i]}.jpg`;
+    }
 
 
 });
@@ -255,7 +247,7 @@ let aId;
 let b;
 let bId;
 
-memory.addEventListener("click",(e)=>{
+memoryPlace.addEventListener("click",(e)=>{
 
     memoClick++;
 

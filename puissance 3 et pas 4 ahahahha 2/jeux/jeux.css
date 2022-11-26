@@ -63,7 +63,7 @@
     
 }
 
-#memory{
+.memory{
     width: 600px;
     display: flex;
     height: 100%;

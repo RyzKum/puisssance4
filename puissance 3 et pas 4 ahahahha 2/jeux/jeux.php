@@ -57,7 +57,9 @@
     <p id="recupTheme"></p>
 </div>
 
-<div id="memoryPlace"></div>
+<div id="memoryPlace">
+    <div class="memory"></div>
+</div>
 
     
 </body>
