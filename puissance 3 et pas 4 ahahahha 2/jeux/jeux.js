@@ -173,7 +173,7 @@ buttonFacile.addEventListener('click',(e)=> {
 
     if(changeLvl == "Normal"){
 
-        w = 16;
+        w = 18;
         u = 6;
     }
 
@@ -210,6 +210,8 @@ buttonFacile.addEventListener('click',(e)=> {
         let create = document.createElement("div");
         create.setAttribute("class","flexCard");
         memory.append(create);
+
+        // ici
 
 
         for(a = 0;a < u;a++){
