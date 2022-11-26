@@ -134,8 +134,9 @@ function randomize(tab) {
     return tab;
 }
 
+
 const memoryPlace = document.getElementById("memoryPlace");
-const memory = document.getElementsByClassName("memory")[0];
+const memory = document.getElementById(`0`);
 
 const buttonFacile = document.querySelector('#injectLvl');
 
@@ -151,11 +152,11 @@ buttonFacile.addEventListener('click',(e)=> {
 
     memory.remove();
 
-    let PlayMemo = document.createElement("div");
-    PlayMemo.setAttribute("class","memory");
+    // let PlayMemo = document.createElement("div");
+    // PlayMemo.setAttribute("class","memory");
     
 
-    memoryPlace.append(PlayMemo);
+    // memoryPlace.append(PlayMemo);
 
     memoRemove = document.getElementsByClassName("memory")[0];
 
@@ -199,7 +200,8 @@ buttonFacile.addEventListener('click',(e)=> {
     rantab = randomize(tab);
     console.log(rantab);
 
-    if(document.getElementsByClassName("carte")[0] == undefined){
+    // if(document.getElementsByClassName("carte")[0] == undefined){
+    // }
 
         
         for(i = 0;i < u;i++){
@@ -225,7 +227,6 @@ buttonFacile.addEventListener('click',(e)=> {
         
     }
     
-    }
     for(i=0 ; i <tab.length ; i++){
 
         let imageMemo = document.getElementsByClassName("carte")[i];

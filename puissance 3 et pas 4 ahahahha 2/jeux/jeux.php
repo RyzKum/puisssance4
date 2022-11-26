@@ -58,7 +58,7 @@
 </div>
 
 <div id="memoryPlace">
-    <div class="memory"></div>
+    <div class="memory" id="0"></div>
 </div>
 
     
