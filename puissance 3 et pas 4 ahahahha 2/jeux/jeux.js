@@ -136,7 +136,7 @@ function randomize(tab) {
 
 
 const memoryPlace = document.getElementById("memoryPlace");
-const memory = document.getElementById(`0`);
+const memory = document.getElementById(`memory`);
 memoRemove = document.getElementsByClassName("memory")[0];
 
 const buttonFacile = document.querySelector('#injectLvl');
