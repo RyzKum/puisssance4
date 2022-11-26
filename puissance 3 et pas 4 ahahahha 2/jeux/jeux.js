@@ -313,6 +313,11 @@ function verifEndGame(){
 
 }
 
+function yup (){
+    if( verifEndGame() == true){
+        chronoStop()
+    }
+}
 
 let memoClick = 0;
 
@@ -372,17 +377,20 @@ memoryPlace.addEventListener("click",(e)=>{
             
         }
 
+        setTimeout(yup(),1000)
         // verifEndGame();
         // mettre la verif de la conditon de victoire
 
-        if( verifEndGame() == true){
-            chronoStop()
-        }
+
 
     }
 
 
+
+
 })
+
+
 
 
 var startTime = 0
